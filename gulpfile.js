@@ -1,11 +1,11 @@
 var gulp = require('gulp'),
 	gutil = require('gulp-util'),
-	browserify = require('gulp-browserify'),
+	//browserify = require('gulp-browserify'),
 	compass = require('gulp-compass'),
 	concat = require('gulp-concat');
 	
 var jsSources = [
-	'components/scripts/data/products.js',
+	'components/scripts/data/products.json',
 	'components/scripts/data/search.js',
 	'components/scripts/searchfield.js',
 	'components/scripts/modernizr/modernizr.3.3.1.mq.addcssclass.min.js',
@@ -21,7 +21,8 @@ var sassSources = ['components/sass/style.scss'];
 gulp.task('js', function() {
 	gulp.src(jsSources)
 		.pipe(concat('script.js'))
-		.pipe(browserify())
+		.on('error',gutil.log)
+		//.pipe(browserify())
 		.pipe(gulp.dest('builds/development/js'))
 });
 
@@ -37,3 +38,7 @@ gulp.task('compass', function() {
 });
 
 gulp.task('default', ['js','compass']);
+
+gulp.task('watch', function() {
+	gulp.watch(jsSources, ['js']);
+});
