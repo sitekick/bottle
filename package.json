@@ -1,0 +1,10 @@
+{
+  "name": "bottle",
+  "version": "1.0.0",
+  "description": "Bottle portfolio project",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Hunter Williams"
+}

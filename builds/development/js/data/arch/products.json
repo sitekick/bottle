@@ -1,0 +1,56 @@
+{
+  "products" :  {
+  "product" : [
+    {
+      "number"  : "5413879-1",
+      "category"  : "Connector RF",
+      "manufacturer" :	"TE Connectivity Ltd",
+      "description" : "Conn BNC RCP 0Hz to 4GHz 50Ohm Solder RA Thru-Hole Gold Tube",
+      "price" : 1,
+      "image" : "5413879-1.jpg",
+      "featured" : true,
+      "sale" : false
+    },
+     {
+      "number"  : "A000008",
+      "category"  : "Embedded System Development Boards and Kits",
+      "manufacturer" :	"Arduino Corporation",
+      "description" : "ATmega32u4 Microcontroller Development Board 16MHz CPU 64.0024MB RAM 1KB/32KB/32MB EEPROM/Flash",
+      "price" : 1,
+      "image" : "A000008.jpg",
+      "featured" : true,
+      "sale" : false
+    },
+	 {
+      "number"  : "SS466A",
+      "category"  : "Hall Effect Sensor",
+      "manufacturer" :	"Honeywell",
+      "description" : "Hall Effect Sensor 20mA Latch 5V/9V/12V/15V/18V/24V 3-Pin Bulk",
+      "price" : 1,
+      "image" : "SS466A.jpg",
+      "featured" : true,
+      "sale" : false
+    },
+     {
+      "number"  : "NLP250R 96S24J",
+      "category"  : "AC to DC Power Supply",
+      "manufacturer" :	"Artesyn Embedded Technologies",
+      "description" : "AC/DC Power Supply Single-OUT 24V 7.3A 250W 18-Pin",
+      "price" : 1,
+      "image" : "NLP250R-96S24J.jpg",
+      "featured" : true,
+      "sale" : false
+    },
+    {
+      "number"  : "MMBT2907ALT1G",
+      "category"  : "GP BJT",
+      "manufacturer" :	"ON Semiconductor",
+      "description" : "Trans GP BJT PNP 60V 0.6A Automotive 3-Pin SOT-23 T/R",
+      "price" : 1,
+      "image" : "MMBT2907ALT1G.jpg",
+      "featured" : true,
+      "sale" : true
+    }
+    ]
+} 
+}

@@ -1,0 +1,14 @@
+
+#primary-menu li{
+
+	
+}
+
+.menu {
+	list-style: none;
+}
+
+
+.menu.horizontal li {
+	display: inline-block;
+}

@@ -1,0 +1,23 @@
+//	_mixins.scss
+//	==============
+
+// Reveal Panels
+
+@mixin revealPanel {
+	background: $blue;
+	color: $white;
+	overflow: hidden;
+	margin-bottom: 1em;
+
+	h2{
+		display: block;
+		padding: 1.5em .75em .75em .75em;
+		background: rgba(0,0,0, .3);
+		min-height: 100px;
+	}
+ 
+}
+
+ 
+
+	
