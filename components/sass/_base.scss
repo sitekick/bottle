@@ -93,11 +93,20 @@
 #main .column {
 	vertical-align: top;
 }
-
-.revealpanel {
-	@include revealPanel;
+.revealpanel  {
+	background: $blue;
+	color: $white;
+	overflow: hidden;
+	margin-bottom: 1em;
 }
 
+.revealpanel h2{
+	display: block;
+	padding: 1.5em .75em .75em .75em;
+	background: rgba(0,0,0, .3);
+	min-height: 100px;
+	}
+	
 	.products .revealpanel h2{
 		margin: .75em 0 0 .75em;
 	}
