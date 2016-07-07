@@ -1,32 +1,34 @@
-
-var src				= 'app',
-	build			= 'build',
-	development 	= 'build/development',
-	production		= 'build/production',
-	srcAssets       = 'app/assets',
-	devAssets 		= 'build/assets',
-	prodAssets  	= 'build/production/assets'
-	;
+var src				= './src/',
+	dist			= './build/',
+	dev 			= 'dev/',
+	prod			= 'prod/';
 	
 
 module.exports = {
 	delete: {
-		src: [devAssets]
+		src: [dist + dev + 'assets']
 	},
 	scripts: {
 		//src:  srcAssets + '/scripts/**/*.{js,json}',
-		src:  srcAssets + '/scripts/*.{js,json}',
-		dest: devAssets + '/scripts'
+		//src:  src + 'js/*.{js,json}',
+		src:  src + 'js/*.js',
+		dest: dist + dev + 'assets/js'
 	},
 	images: {
 		//src:  srcAssets + '/img/**/*',
-		src:  srcAssets + '/img/*',
-		dest: devAssets + '/img'
+		src:  [src  + 'img/*',src + '/img/**/*'],
+		dest: dist + dev + 'assets/img'
+	},
+	data: {
+		//src:  srcAssets + '/img/**/*',
+		src:  src  + 'data/*.{csv,json}',
+		dest: dist + dev + 'assets/data'
 	},
 	sass: {
 		//src:  srcAssets + '/sass/**/*.{sass,scss}',
-		src:  srcAssets + '/sass/*.{sass,scss}',
-		dest: devAssets + '/css',
+		//src:  src + '/scss/*.{sass,scss}',
+		src:  src + 'scss/style.scss',
+		dest: dist + dev + 'assets/css',
 		options: {
 			noCache: true,
 			compass: false,
@@ -47,9 +49,13 @@ module.exports = {
 		],
 		cascade: true
 	},
+	bower:{
+		src: dist + dev,
+		index: 'index.html'
+	},
 	watch: {
-		sass:    srcAssets + '/sass/*.{sass,scss}',
-		scripts: srcAssets + '/scripts/*.{js,json}',
-		images:  srcAssets + '/img/**/*'
+		sass:    src + 'scss/*.{sass,scss}',
+		scripts: src + 'js/*.{js,json}',
+		images:  src + 'img/**/*'
 	}
 };

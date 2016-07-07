@@ -1,0 +1,26 @@
+{
+  "name": "bottle",
+  "description": "Bottle portfolio project",
+  "main": "",
+  "authors": [
+    "Hunter Williams"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sitekick/bottle",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.12.0",
+    "Chart.js": "1.0.2",
+    "devbridge-autocomplete": "1.2.24"
+  },
+  "resolutions": {
+    "jquery": "1.12.0"
+  }
+}

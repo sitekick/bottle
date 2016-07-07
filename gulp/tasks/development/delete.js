@@ -6,5 +6,5 @@ var gulp 	= require('gulp'),
  * Delete folders and files
  */
 gulp.task('delete', function() {
-  del(config.src);
+	del(config.src);
 });
