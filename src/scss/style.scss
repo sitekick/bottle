@@ -1,6 +1,10 @@
 // style.scss
 //	==============
 
+
+//Mixin
+@import "mixins";
+
 // Partials
 @import "resets";
 @import "variables";
@@ -8,7 +12,12 @@
 @import "font";
 @import "base";
 @import "anchor";
-@import "menu";
 @import "nav";
+
+
+//Modules
+@import "menu";
 @import "form";
+
+//Mq
 @import "mq";

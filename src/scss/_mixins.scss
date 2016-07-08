@@ -1,25 +1,31 @@
 //	_mixins.scss
 //	==============
 
-// Reveal Panels
 
-/*
-@mixin revealPanel {
-	background: $blue;
-	color: $white;
-	overflow: hidden;
-	margin-bottom: 1em;
-
-	h2{
-		display: block;
-		padding: 1.5em .75em .75em .75em;
-		background: rgba(0,0,0, .3);
-		min-height: 100px;
-	}
- 
+@mixin screen-large {
+  @media screen and (max-width: #{$screen-large}) {
+    @content;
+  }
 }
-*/
 
- 
+@mixin screen-medium {
+  @media screen and (max-width: #{$screen-medium}) {
+    @content;
+  }
+}
 
+@mixin screen-small {
+  @media screen and (max-width: #{$screen-small}) {
+    @content;
+  }
+}
+
+
+@mixin socialNetworkIcon($offsety, $color) {
+	background-position: $offsety 0;
+	
+	&:hover {
+		background-color: $color;
+	}
+}
 	

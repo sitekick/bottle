@@ -5,50 +5,64 @@
 	display: inline-block;
 	margin-bottom: .5em;
 	width: 100%;
-}
 
-#searchform .border {
-	background: $white;
+	.border {
+		background: $white;
+		display: inline-block;
+		border: 4px solid $grey;
+		width: 98%;
+		overflow: hidden;
+		white-space: nowrap;
+	
+		@include screen-medium{
+			width: 90%;
+		}
+		
+	}
+	
+	.border.active {
+		border: 4px solid $blue;
+	}
+	
+	input{
 	display: inline-block;
-	border: 4px solid $grey;
-	width: 98%;
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-	#searchform .border.active {
-	border: 4px solid $blue;
 	}
 
-
-#searchform input{
-	display: inline-block;
 }
 
-#header input[type=text] {
-	width: 75%;
-	border: 0;
-	box-shadow: none;
-	text-indent: 5px;
-}
-#header input:focus {
-	outline: none;
+
+
+#header {
 	
-}
-#header input[type=submit] {
-	border-radius: 0;
-	background: $grey;
-	color: $white;
-	box-shadow: none;
-	border: 0;
-	margin: 0 0;
-	padding: .25em 1em;
-	width: 25%;
-}
+		input[type=text] {
+			width: 75%;
+			border: 0;
+			box-shadow: none;
+			text-indent: 5px;
+		}
+		
+		input:focus {
+			outline: none;
+		}
+		
+		input[type=submit] {
+			border-radius: 0;
+			background: $grey;
+			color: $white;
+			box-shadow: none;
+			border: 0;
+			margin: 0 0;
+			padding: .25em 1em;
+			width: 25%;
+		}
 
-		#header input[type=submit].active {
+		input[type=submit].active {
 			background: $blue;
 		}
+		
+}
+
+
 
 select {
 	border: 0;
@@ -59,9 +73,6 @@ select {
 	color: $blue;
 }
 select:focus {
-	outline: none;
+// 	outline: none;
 }
 
-select:placeholder-shown{
-// 	border: 1px solid red;
-}

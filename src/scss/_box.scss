@@ -1,77 +1,341 @@
 #container {
 	margin: 0 auto;
-	max-width: 1324px;
-	background: #BBB;
+	max-width: $screen-full;
+	background: $grey;
 	overflow: hidden;
+	
+	
+	@include screen-large{
+		background: #FFF;
+	}
 }
 
-	#login {
-		width: 100%;
-		background: #FFF;
-		overflow: hidden;
-	}
-		#login div {
-			width: 22.6586102719%;
-			float: right;
-			background: #000;
-		}
-			
-		#header {
-			margin: 0 2.34375%; 
-		}
-
-		#main {
-			display: block;
-			margin: 0 2.34375%;
-		}
+#login {
+	background: $white;
+	overflow: hidden;
 	
-	.floater {
+	div {
+		width: (300px/$screen-full) * 100%;
 		float: right;
-		width: 22.6586102719%;
+		background: $black;
+		
+		@include screen-large{
+			width: 34.11885%;
+		}
+		
+	}
+		
+	h5 {
+			
+		@include screen-large{
+			text-align: center;
+		}
+	}
+}
+		
+		#header,
+		#main,
+		#footer  {
+			margin: 0 1.25em; 
+		}
+		 		
+
+#header {
+		
+		.row {
+			
+			@include screen-small{
+				position: static;
+				z-index: 1; 
+			}
+		}
+		
+		
+		.column {
+		
+			@include screen-medium{
+				text-align: center;
+			}
+		
+		}
+		
+		.column.logo{
+			
+			img{
+				
+				@include screen-small{
+				margin: .75em 0;
+				}
+			}
+		
+		}
+		
+		@include screen-small{
+			margin-bottom: .75em;
+		}	
+}
+
+#main  {
+		
+		.column{
+			
+			@include screen-medium{
+				margin-bottom: 1em;
+			}
+			
+		}
+}
+		
+#footer {
+	
+	
+	@include screen-small{
+		padding-top: 1em;
 	}
 	
-	.wrapper{
-		width: 77.3413897281%;
-		float: left;
-		background: #FFF;
-	}
-	
-		.wrapper.footer{
-			clear: right;
-		}
-	
-		#footer {
-			margin: 0 2.34375%; 
-		}
+}
+		
 
 /*=============GRID===============*/
 
-.row {
-	width: 100%;
-	display: table;
+.wrapper {
+	width: (1024px/$screen-full) * 100%;
+	float: left;
+	background: $white;
+	
+		.row {
+			width: 100%;
+			display: table;
+		}
+
+		.column {
+			display: table-cell;
+		}
+
+		.col1,.col2,.col12 {padding-right: 2.45901%;}
+		
+		.col1,.col2 {width: 34.11885%;}
+		
+		.col12 {width: 68.2377%;}
+		
+		.col23 {width: 65.77869%;}
+		
+		.col3 {width: 31.65984%;}
+		
+		.colspan {width: 100%;}
+
+	
+	@include screen-large  {
+		float: none;
+		width: 100%;
+	}
+
 }
 
-.column {
-	display: table-cell;
+
+.wrapper.main {
+		
+		.row{
+				
+				@include screen-medium{
+					display: block;
+				}
+		}
+		
+		.column{
+				
+				@include screen-medium{
+					display: block;
+					padding-right: 0;
+					width: 100%;
+				}
+		}
 }
 
-.floater .row {
-	width: 91.9732441472%;
-	margin-left: 4%;
-	display: block;
+.wrapper.footer{
+	clear: right;
+		
+			@include screen-large  {
+				clear: none;
+			}
+
+
+	footer {
+		margin: 0 1.25em; 
+	
+	
+		.row,
+		.column {
+			
+			@include screen-small  {
+				display: block;
+				width: 100%;
+			}
+			
+		}
+		
+		
+	
+	}
+	
+	
+
 }
 
-.floater .column {
-	display: block;
+
+.floater {
+		float: right;
+		width: (300px/$screen-full) * 100%;
+		color: #fff;
+		
+		.row {
+			width: calc(100% - 3em);
+			margin-left: 1.5em;
+			display: block; 
+			
+			@include screen-large {
+				margin-left: 0;
+				width: 100%;
+				display: table;
+				}
+			
+			@include screen-small {	
+				width: calc(100% - 3em);
+				margin-left: 1.5em;
+				display: block;
+				overflow: hidden;
+				}
+		}
+
+		.column {
+			display: block;
+			padding-right: 0;
+			width: 100%;
+			margin: 1em 0;
+			display: table;
+	
+			@include screen-large {
+				margin: 0;
+				display: table-cell;
+			}
+			
+			@include screen-small {
+				display: block;
+				margin: 1em 0;
+				padding-right: 0;
+				width: 100%;
+			}
+			
+			
+		}
+		
+		.col1, .col2{
+			//@extend .column;
+					
+				@include screen-large {
+					padding-right: 2.45901%;
+					width: 34.11885%;
+				}
+		}
+		
+		.col3 {
+			//@extend .column;
+				
+				@include screen-large {
+					width: 31.65984%;
+				}
+		}
+		
+		@include screen-large {
+			float: none;
+			width: 95.3125%;
+			margin-left: 2.34375%;
+			margin-bottom: 2em;
+		}
+		
+		@include screen-small {
+			width: 100%;
+			margin-left: 0;
+		}
+}
+
+
+.floater.graphs {
+	
+	text-align: center;
+	
+	.row {
+		
+		@include screen-large {
+			background: #BBB;
+			padding: 2em 0;
+		}
+		
+		@include screen-small {
+			padding: 0 0;
+		}
+		
+	}
+	
+	.column {
+		min-height: 300px;
+	
+		.graph {
+			display: table-cell;
+			vertical-align: middle;
+		
+			@include screen-small {
+				display: block;
+				margin: 5px;
+			}
+		
+		}
+		
+		canvas{
+			display: block;
+			width: 100% !important;
+			height: auto !important;
+		}
+		
+		@include screen-large {
+			min-height: 0;
+			}
+		
+		@include screen-small {
+			float: left;
+			display: block;
+			margin: 1em 0;
+			padding-right: 0;
+			width: 100%;
+			}
+			
+
+	}
+	
+	.column.social{
+ 				
+ 			@include screen-large {
+ 				text-align: right;
+			}
+		}
+
+}
+
+.floater.address {
+	
+		hr {
+			visibility: hidden;
+			
+			@include screen-large {
+			visibility: visible;
+			}
+		}
+
+		@include screen-large {
+			color: #000;
+		}
+
 }
 	
-	.col1,.col2,.col12 {padding-right: 2.4590163934%;}
-	.col1,.col2 {width: 34.118852459%;}
-	.col12 {width: 68.237704918%;}
-	.col23 {width: 65.7786885246%;}
-	.col3 {width: 31.6598360656%;}
-	.colspan {width: 100%;}
 	
-	.floater .col1,.floater .col2,.floater .col12 {padding-right: 0;}
-	.floater .col1,.floater .col2,.floater .col3 {width: 100%;}
-
+	
