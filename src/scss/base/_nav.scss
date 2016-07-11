@@ -55,21 +55,16 @@
 			background-position: 0 0;
 			background-color: $black;
 			background-size: 128px 32px;
-		
-			&.google {
-				@include socialNetworkIcon(0, $socialGoogle);
-			}
-			&.facebook {
-				@include socialNetworkIcon(-32px, $socialFacebook);	
-			}
-			&.twitter {
-				@include socialNetworkIcon(-64px, $socialTwitter);
-			}
-			&.youtube {
-				@include socialNetworkIcon(-96px, $socialYouTube);
-			}
-		
 		}
+		
+		//$socialNets @utils/variables
+		@each $s in $socialNets {
+				a.#{nth($s,1)} {
+				//socialNetworkIcon @utils/mixins
+				@include socialNetworkIcon(nth($s,2), nth($s,3));
+				}
+			}
+		
 		
 		span {
 			display: none;

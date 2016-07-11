@@ -1,0 +1,110 @@
+#container {
+	margin: 0 auto;
+	max-width: $screen-full;
+	background: $grey;
+	overflow: hidden;
+	
+	@include screen-large{
+		background: #FFF;
+	}
+}
+
+
+	#login {
+		background: $white;
+		overflow: hidden;
+	
+		div {
+			width: (300px/$screen-full) * 100%;
+			float: right;
+			background: $black;
+			
+			@include screen-large{
+				width: 34.11885%;
+			}
+		
+		}
+		
+		h5 {
+				
+			@include screen-large{
+				text-align: center;
+			}
+		}
+	}
+
+	.wrapper {
+		width: (1024px/$screen-full) * 100%;
+		float: left;
+		background: $white;
+	
+		&.footer{
+			clear: right;
+		
+			@include screen-large  {
+				clear: none;
+			}
+		}
+	
+		@include screen-large  {
+			float: none;
+			width: 100%;
+		}
+	}
+
+		#header,
+		#main,
+		#footer  {
+			margin: 0 1.25em; 
+		}
+		 	
+		#header {
+			margin-bottom: 1.5em;
+			overflow: hidden;
+		
+			h1 {
+				margin-bottom: 1em;
+			}
+		}
+		
+		#footer {
+			margin: 0 1.25em; 
+			
+			@include screen-small{
+				padding-top: 1em;
+			}
+		}
+
+/* Custom sidebar "floater" */
+
+	.floater {
+		float: right;
+		width: (300px/$screen-full) * 100%;
+		color: #fff;
+		
+		@include screen-large {
+			float: none;
+			width: 95.3125%;
+			margin-left: 2.34375%;
+			margin-bottom: 2em;
+		}
+		
+		@include screen-small {
+			width: 100%;
+			margin-left: 0;
+		}
+
+	&.graphs {
+		text-align: center;
+	}
+	&.address {
+		
+		hr {
+			visibility: hidden;
+			
+			@include screen-large {
+			visibility: visible;
+			}
+		}
+	}
+	}// .floater

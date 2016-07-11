@@ -6,7 +6,7 @@ var src				= './src/',
 
 module.exports = {
 	delete: {
-		src: [dist + dev + 'assets']
+		src: [dist + dev + 'assets/css', dist + dev + 'assets/js']
 	},
 	scripts: {
 		//src:  srcAssets + '/scripts/**/*.{js,json}',
@@ -26,15 +26,18 @@ module.exports = {
 	},
 	sass: {
 		//src:  srcAssets + '/sass/**/*.{sass,scss}',
-		//src:  src + '/scss/*.{sass,scss}',
-		src:  src + 'scss/style.scss',
+		src:  src + 'scss/**/*.scss',
+	
+		//src:  src + 'scss/style.scss',
 		dest: dist + dev + 'assets/css',
 		options: {
 			noCache: true,
 			compass: false,
 			//bundleExec: true,
+			//sourcemapPath: '../src/scss',
 			bundleExec: false,
-			sourcemap: true
+			sourcemap: true,
+			style: 'expanded'
   		}
 	},
 	autoprefixer: {
@@ -54,7 +57,7 @@ module.exports = {
 		index: 'index.html'
 	},
 	watch: {
-		sass:    src + 'scss/*.{sass,scss}',
+		sass:    src + 'scss/**/*.scss',
 		scripts: src + 'js/*.{js,json}',
 		images:  src + 'img/**/*'
 	}

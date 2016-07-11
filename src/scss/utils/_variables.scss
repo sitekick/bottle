@@ -9,23 +9,21 @@
 
 $black				: #000;
 $white				: #FFF;
-//identity
 $blue				: #0099CC;
 $grey				: #BBB;
-//complementary
-
 $borderHighlight	: #CCC;
 $borderLowlight		: #AAA;
 
-//limited
-$socialGoogle		: #DA4A34;
-$socialFacebook		: #2768A5;	 
-$socialTwitter		: #00AEF0;
-$socialYouTube		: #D02E17;	 
 
+$socialNets : (
+	('google',0,#DA4A34),
+	('facebook',-32px,#2768A5),
+	('twitter',-64px,#00AEF0),
+	('youtube',-96px,#D02E17)
+);
 
-//$max-width_container: 1324px;
-$screen-full	: 1324px;
-$screen-large	: 1024px;
-$screen-medium	: 768px;
-$screen-small	: 500px;
+	 
+$screen-full		: 1324px;
+$screen-large		: 1024px;
+$screen-medium		: 768px;
+$screen-small		: 500px;

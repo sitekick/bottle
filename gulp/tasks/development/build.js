@@ -9,7 +9,8 @@ var gulp 			= require('gulp'),
 gulp.task('build', function() {
   runSequence(
   	'delete',
-  	['data','images','scripts','sass'],
+//   	['data','images','scripts','sass'],
+  	['scripts','sass'],
   	'watch'
   	);
   });

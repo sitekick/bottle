@@ -1,0 +1,229 @@
+/*=============GRID===============*/
+
+		
+.row {
+	width: 100%;
+	display: table;
+	
+	.main &{ 
+		
+		@include screen-medium{
+			display: block;
+		}
+	}
+	
+		#main &{
+			margin-bottom: 2em;
+		}
+	
+	.footer & {
+		
+		@include screen-small  {
+			display: block;
+			}
+	}
+	
+	header &{ 	//header .row
+		position: relative;
+		background: $white;
+		
+		@include screen-small{
+			position: static;
+			z-index: 1; 
+		}
+	}
+	
+		&.brand{
+			z-index: 3;
+			
+			.column{
+				vertical-align: bottom;
+				text-align: center;
+			}
+		}
+		
+		&.nav {
+			z-index: 2;
+		}
+		
+		&.slider{
+			z-index: 1;
+			background: $black;
+			
+			.column{
+				vertical-align: middle;
+			
+				&.col3{
+					color: $white;
+				}
+			
+			}
+		}
+
+	.floater & { //.floater .row
+		width: calc(100% - 3em);
+		margin-left: 1.5em;
+		display: block; 
+		
+		.column {
+			display: block;
+			padding-right: 0;
+			width: 100%;
+			margin: 1em 0;
+			
+			@include screen-large {
+				margin: 0;
+				display: table-cell;
+			}
+			
+			@include screen-small {
+				display: block;
+				margin: 1em 0;
+				padding-right: 0;
+				width: 100%;
+			}
+		}
+		
+		@include screen-large {
+			margin-left: 0;
+			width: 100%;
+			display: table;
+		}
+			
+		@include screen-small {	
+			width: calc(100% - 3em);
+			margin-left: 1.5em;
+			display: block;
+			overflow: hidden;
+		}
+	
+	}//.floater .row
+	
+	.floater.address & {//.floater.address .row
+	
+		.column {
+			
+			@include screen-large {
+ 				width: 50%;
+			}
+		
+		}
+		
+		.social{
+ 			
+ 			@include screen-large {
+ 				text-align: right;
+			}
+		}
+		
+		@include screen-large {
+			color: #000;
+		}
+	}	
+	
+	.floater.graphs & { //.floater.graphs .row
+		
+		.column {
+			min-height: 300px;
+		
+			.graph {
+				display: table-cell;
+				vertical-align: middle;
+			
+				@include screen-small {
+					display: block;
+					margin: 5px;
+				}
+			}
+		
+			canvas{
+				display: block;
+				width: 100% !important;
+				height: auto !important;
+			}
+		
+			@include screen-large {
+				min-height: 0;
+			}
+		
+			@include screen-small {
+				float: left;
+				display: block;
+				margin: 1em 0;
+				padding-right: 0;
+				width: 100%;
+			}
+		}
+		
+		@include screen-large {
+			background: #BBB;
+			padding: 2em 0;
+		}
+		
+		@include screen-small {
+			padding: 0 0;
+		}
+	}
+
+	.col1,.col2,.col12 {padding-right: 2.45901%;}
+	.col1,.col2 {
+		width: 34.11885%;
+		
+			.floater & {
+				@include screen-large {
+					padding-right: 2.45901%;
+					width: 34.11885%;
+				}
+			}
+		}
+	.col12 {width: 68.2377%;}
+	.col23 {width: 65.77869%;}
+	.col3 {
+		width: 31.65984%;
+			
+			.floater & {
+				@include screen-large {
+					width: 31.65984%;
+				}
+			}
+		}
+	
+	.colspan {width: 100%;}
+	
+	.column {
+	display: table-cell;
+	
+		.main & {
+					
+				@include screen-medium{
+					display: block;
+					padding-right: 0;
+					width: 100%;
+					}
+	
+		}
+		
+			#main &{
+				margin-bottom: 1em;	
+				vertical-align: top;
+			}
+		
+		.footer & {
+				
+				@include screen-small  {
+					display: block;
+					width: 100%;
+				}
+		}
+	}// .column
+
+}// .row
+
+
+	
+
+
+
+
+	
+

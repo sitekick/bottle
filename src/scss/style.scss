@@ -2,22 +2,24 @@
 //	==============
 
 
-//Mixin
-@import "mixins";
+// Utilities
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/resets";
 
-// Partials
-@import "resets";
-@import "variables";
-@import "box";
-@import "font";
-@import "base";
-@import "anchor";
-@import "nav";
+// Layout
+@import "layout/box";
+@import "layout/grid";
+// Base
+@import "base/theme";
+@import "base/fonts";
+@import "base/anchor";
+@import "base/nav";
+
+// Components
+@import "components/menu";
+@import "components/form";
 
 
-//Modules
-@import "menu";
-@import "form";
-
-//Mq
-@import "mq";
+// Tmp
+@import "base/mq";
