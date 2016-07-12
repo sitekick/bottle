@@ -7,31 +7,39 @@
 	margin: 0 0;
 	padding: 0 0;
 
-	.resources & li,
-	.footer & li {
+	.resources & li {
 		display: list-item;
 		margin: 0 0 .25em;
-	}
-	.resources & li {
 		
-			@include screen-medium{
-				display: inline-block;
-			}
-			
-			&:after{
-		
-				@include screen-medium{
-					content: ' |';
-				}
-			}
-			
-			&:last-child:after{
-						
-				@include screen-medium{
-					content: '';
-				}
+		@include screen-medium{
+			display: inline-block;
 		}
+		
+		@include screen-small{
+			margin: .5em 0;
+		}
+		
+	&:after{
+		
+		@include screen-medium{
+			content: ' |';
+		}
+	}
+			
+	&:last-child:after{
+						
+		@include screen-medium{
+			content: '';
+		}
+
+	}
 	
+		a{
+				
+		&:hover{
+			text-decoration: underline;
+		}
+		}
 	}
 
 	.social & li{
@@ -65,72 +73,34 @@
 				}
 			}
 		
-		
 		span {
 			display: none;
 		}
 		
 	}
-
-}
-
-.resources .menu li,
-.footer .menu li {
-/*
-	display: list-item;
-	margin: 0 0 .25em;
-*/
-}
-
 	
-	
-		.social .menu li a {
-			
-/*
-			display: block;
-			float: left;
-			width: 100%;
-			height: 100%;
-			background-image: url(../img/socialnets.png);
-			background-repeat: no-repeat;
-			background-position: 0 0;
-			background-color: $black;
-			background-size: 128px 32px;
-*/
+	.footer & li{
+		display: list-item;
+		margin: 0 0 .25em;
+
+		a{
+			color: #000;
+		
+		&:hover{
+			text-decoration: underline;
 		}
-		
-			.social .menu li a.google {
-// 				background-position: 0 0;
-			}
-				.social .menu li a.google:hover {
-// 					background-color: $socialGoogle;
-				}
-				
-			.social .menu li a.facebook {
-// 				background-position: -32px 0;
-			}
-			
-				.social .menu li a.facebook:hover {
-// 					background-color: $socialFacebook;
-				}
-			
-			.social .menu li a.twitter {
-// 				background-position: -64px 0;
-			}
-			
-				.social .menu li a.twitter:hover {
-// 					background-color: $socialTwitter;
-				}
-			
-			.social .menu li a.youtube {
-// 				background-position: -96px 0;
-			}
-				
-				.social .menu li a.youtube:hover {
-// 					background-color: $socialYouTube;
-				}
-		
-	.social .menu span {
-// 		display: none;
+		}
+
 	}
+
+&.horizontal {
+	
+		li{
+			//@todo is this necesary?
+			display: inline-block;
+		}
+}
+}
+
+
 

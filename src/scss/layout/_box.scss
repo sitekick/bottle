@@ -97,14 +97,5 @@
 	&.graphs {
 		text-align: center;
 	}
-	&.address {
-		
-		hr {
-			visibility: hidden;
-			
-			@include screen-large {
-			visibility: visible;
-			}
-		}
-	}
+	
 	}// .floater

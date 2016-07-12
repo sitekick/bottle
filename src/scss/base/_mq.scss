@@ -1,149 +1,51 @@
-@media (max-width:1024px) {
-		   
-}
 
-
-@media (max-width:768px) {
-		
-}/* end mq 768 */
 
 @media (max-width:500px) {
 	
 		
-	
-	#searchform {
-// 		margin-bottom: 0;
-	}
-	
-	#searchform .border {
-// 		width: 98%;
-	}
-	
-	
-	.row.slider {
-// 		display: none;
-	}
-	
-	.products .resources,
-	.software .resources {
-		text-align: center;
-	}
-		.resources > * {
-			display: block;
-		}
-		.resources .menu li {
-			margin: .5em 0;
-		}
 		
-	.software {
-		height: 600px;
-	}
-	.software .blog {
-		top: 175px;
-	}
-	
-	.blog .logo,
-	.blog .teaser {
-		display: block;
-		width: 100%;
-		margin: .5em 0;
-	}
-	.blog hr {
-		width: 100%; 
-		margin: 1em 0;
-	}
-	
-	.floater {
+	.no-js .footer .menu{
 /*
-		width: 100%;
-		margin-left: 0;
-*/
-	}
-
-		.floater .row {
-/*
-			width: 91.9732441472%;
-			margin-left: 4%;
-			display: block;
-			overflow: hidden;
-*/
-		}
-			.floater.graphs .row {
-// 				padding: 0 0;
-			}
-			
-		.floater .column,
-		.floater .column {
-/*
-			display: block;
-			margin: 1em 0;
-*/
-		}
-			
-			.floater.graphs.column {
-// 			float: left;
-			}
-		
-		.floater .col1,.floater .col2 {/* padding-right: 0; */}
-		.floater .col1,.floater .col2,.floater .col3 {/* width: 100%; */}
-	
-		
-		#footer {
-// 			padding-top: 1em;
-		}
-		
-		.footer .row,
-		.footer .column {
-/*
-			display: block;
-			width: 100%;
-*/
-		}
-		
-		.footer .col1, .footer .col2  {padding-right: 0;}
-		
-		
-		.footer hr{
-// 			visibility: hidden;
-		}
-		
-		.no-js .footer .menu{
 				line-height: 2.25em;
 				text-align: center;	
+*/
 			}
-		.no-js .footer .menu li{
-				display: inline-block;
+	
+	.no-js .footer .menu li{
+// 				display: inline-block;
 			}
 			
-		.no-js .footer .menu li a{
-				padding: .5em;
+	.no-js .footer .menu li a{
+// 				padding: .5em;
 			}
 			
 		
-		.footer h4{
-			text-align: center;
-		}
+	.footer h4{
+// 		text-align: center;
+	}
 		
-		.js .footer h4 {
-			display: block;
-			margin: 0;
-			background: #BBB;
-			padding: .75em 0;
-			color: #FFF;
+/*
+	.js .footer h4 {
+		display: block;
+		margin: 0;
+		background: #BBB;
+		padding: .75em 0;
+		color: #FFF;
 			cursor: pointer;
 		}
 		
-			.js .footer h4.active{
-				background: #09C;
-				}
+		.js .footer h4.active{
+			background: #09C;
+		}
 		
 		.js .footer .menu{
-				text-align: left;	
-			}
+			text-align: left;	
+		}
 					
 		.js .footer .menu li{
-				display: list-item;
-				margin-bottom: .5em;
-			}		
+			display: list-item;
+			margin-bottom: .5em;
+		}	
+*/	
 	
 } /* end mq 500 */

@@ -1,0 +1,59 @@
+ .no-js {
+	 
+	 .products .col23,
+	 .software .col12 {
+	 	display: none;
+ 		}
+	 
+	 .products .col1,
+	 .software .col3 {
+		 width: 100%;
+ 		}
+ 
+ 	.revealpanel h2 {
+	 	padding: 1em;
+	 	min-height: 0;
+ 		}
+ 	
+ 	 .software {
+	 	height: auto;
+ 	
+		 	.panel {
+		 		position: relative;
+	 		}
+ 		}
+ 		
+ 	.footer {
+	 	
+	 	h4 {
+		 	
+		 	@include screen-small {
+			 	margin: 1em 0 1em 0;
+			 	}
+	 	}
+	 	
+	 	
+	 	.menu {
+		 	
+		 	li {
+			 	
+			 	a {
+				 	
+				 	@include screen-small {
+				 	padding: .5em 1em .5em 0;
+				 	}
+			 	}
+			 	
+			 	
+			 	@include screen-small {
+				 	display: inline-block;
+				 }
+		 	}
+		 	
+		 	@include screen-small {
+			 	line-height: 2.25em;
+			 }
+	 	}
+ 	}
+ 
+ }

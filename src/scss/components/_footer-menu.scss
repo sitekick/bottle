@@ -1,0 +1,53 @@
+.footer {
+		
+		h4{
+			text-align: center;
+		}
+	
+	.no-js & {
+		/* @base/nojs for fallbacks */
+	}
+	
+	.js & {
+			
+		h4 {
+			
+			@include screen-small {
+				display: block;
+				margin: 0;
+				background: #BBB;
+				padding: .75em 0;
+				color: #FFF;
+				cursor: pointer;
+			}
+		
+		&.active {
+			
+			@include screen-small {
+				background: #09C;
+			}
+		}
+		
+		}
+		
+		.menu {
+			
+			@include screen-small {
+			text-align: left;
+			}
+		
+			li {
+				
+				@include screen-small {
+				display: list-item;
+				margin-bottom: .5em;
+				}
+			}
+		
+		}
+	}
+}
+
+
+
+	

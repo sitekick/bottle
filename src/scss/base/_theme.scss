@@ -1,4 +1,3 @@
-
 /*=============IMAGE=============*/
 
 .autosize {
@@ -29,26 +28,16 @@
 	
 }
 
-
-
 /*=============MAIN=================*/
-
-
 
 .software {
 	
-	@include screen-medium{
-		position: relative;
-		height: 525px;
-	}
-
 	.panel {
 		
 		@include screen-medium{
 			position: absolute; 
 			top: 0;
 		}
-	
 	}
 	
 	.blog {
@@ -58,11 +47,53 @@
 			top: 150px;
 		}
 	}
-
+	
+	/* Media Queries */
+	
+	@include screen-medium{
+		position: relative;
+		height: 525px;
+	}
+	@include screen-small {
+		height: 600px;
+	}
 }
 
 
-.revealpanel  {
+.resources {
+	
+	h3{
+		margin-bottom: .5em;
+	
+		@include screen-medium{
+			margin: 0 .5em 0 0;
+		}
+	}
+	
+	> * {
+		
+		@include screen-medium{
+			display: inline-block;
+		}
+		@include screen-small{
+			display: block;
+		}
+		
+	}
+	
+	/* Parents */
+	.products & {
+		text-align: right;
+	}
+	
+	/* Media Queries */
+	@include screen-small{
+		text-align: center;
+	}
+	
+}
+
+ .revealpanel  {
 	background: $blue;
 	color: $white;
 	overflow: hidden;
@@ -90,60 +121,6 @@
 	}
 	
 }
-
-
-
-.resources {
-	
-	h3{
-		margin-bottom: .5em;
-	
-		@include screen-medium{
-			margin: 0 .5em 0 0;
-		}
-	}
-	
-	.products & {
-		text-align: right;
-	}
-	
-	
-	> * {
-		
-		@include screen-medium{
-			display: inline-block;
-		}
-	}
-	
-}
-
-
- .no-js {
-	 
-	 .products .col23,
-	 .software .col12 {
-	 	display: none;
- 		}
-	 
-	 .products .col1,
-	 .software .col3 {
-		 width: 100%;
- 		}
- 
- 	.revealpanel h2 {
-	 	padding: 1em;
-	 	min-height: 0;
- 		}
- 	
- 	 .software {
-	 	height: auto;
- 	
-		 	.panel {
-		 		position: relative;
-	 		}
- 		}
- 
- }
 
 /*--------------Table----------------*/
 
@@ -192,13 +169,18 @@ tbody {
 	height: 350px;
 }
 
-
 .blog{
 	
 	.logo,
 	.teaser {
 		vertical-align: middle;
 		display: inline-block;
+		
+		@include screen-small{
+		display: block;
+		width: 100%;
+		margin: .5em 0;
+		}
 	}
 	
 	.logo {
@@ -210,15 +192,15 @@ tbody {
 		width: 66%;
 	}
 	
-	hr {
-		width: 40%; 
-		margin: 1em 0 1em 34%;
+	.software & {
+		
+		@include screen-small{
+			top: 175px;
+		}
+		
 	}
-
+	
 }
-
-
-
 
 /*-----Reveal Panels--------*/
 
@@ -254,10 +236,6 @@ tbody {
 	}
 }
 	
-		
-	
-			
-
 /*=============ASIDE============*/
 
 
@@ -279,37 +257,47 @@ tbody {
 	 }
 }
 	
-
-
 .column.social h4 {
 	 display: none;
 }
 	
+
+/*=============RULE=============*/
+
+
+hr{
 	
-
-/*=============FOOTER=============*/
-
-#footer {
-	margin-bottom: 2em;
-
-	hr{
+	/* Parents */
+	#footer &{
 		visibility: visible;
 	
 		 @include screen-small {
-				visibility: hidden;
-			 }
-	}
-
-	.menu a {
-		color: #000;
-		text-decoration: none;
+			visibility: hidden;
+		}
 	}
 	
-	h4 {
-// 		margin: 1.5em 0 .5em 0;
+	.address & {
+		visibility: hidden;
+			
+		@include screen-large {
+			visibility: visible;
+		}
 	}
-
+	
+	.blog & {
+		width: 40%; 
+		margin: 1em 0 1em 34%;
+		
+		@include screen-small {
+		width: 100%; 
+		margin: 1em 0;
+		}
+	
+	}
+	
 }
+	
+
 
 
 

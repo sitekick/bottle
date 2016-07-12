@@ -13,13 +13,11 @@
 // Base
 @import "base/theme";
 @import "base/fonts";
-@import "base/anchor";
-@import "base/nav";
+@import "base/nav"; // List menus other than main menu  
+@import "base/nojs";
 
 // Components
-@import "components/menu";
+@import "components/menu"; // Main menu 
 @import "components/form";
+@import "components/footer-menu";
 
-
-// Tmp
-@import "base/mq";

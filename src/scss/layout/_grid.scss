@@ -4,7 +4,33 @@
 .row {
 	width: 100%;
 	display: table;
-	
+/* Classes */	
+&.brand{
+	z-index: 3;
+			
+		.column{
+			vertical-align: bottom;
+			text-align: center;
+		}
+	}
+		
+&.nav {
+	z-index: 2;
+	}
+		
+&.slider{
+	z-index: 1;
+	background: $black;
+			
+		.column{
+			vertical-align: middle;
+			
+		&.col3{
+			color: $white;
+		}
+		}
+}
+/* Parents */		
 	.main &{ 
 		
 		@include screen-medium{
@@ -33,33 +59,6 @@
 		}
 	}
 	
-		&.brand{
-			z-index: 3;
-			
-			.column{
-				vertical-align: bottom;
-				text-align: center;
-			}
-		}
-		
-		&.nav {
-			z-index: 2;
-		}
-		
-		&.slider{
-			z-index: 1;
-			background: $black;
-			
-			.column{
-				vertical-align: middle;
-			
-				&.col3{
-					color: $white;
-				}
-			
-			}
-		}
-
 	.floater & { //.floater .row
 		width: calc(100% - 3em);
 		margin-left: 1.5em;
@@ -170,9 +169,17 @@
 		width: 34.11885%;
 		
 			.floater & {
+				
 				@include screen-large {
 					padding-right: 2.45901%;
 					width: 34.11885%;
+				}
+			}
+			
+			.footer & {
+				
+				@include screen-small {
+					padding-right: 0;
 				}
 			}
 		}
