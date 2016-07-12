@@ -44,6 +44,7 @@
 
 	.social & li{
 		display: inline-block;
+		margin: 0 .5em 0 0;
 		width: 32px;
 		height: 32px;
 		background: $black;
@@ -75,6 +76,10 @@
 		
 		span {
 			display: none;
+		}
+		
+		@include screen-small {
+			margin: 0 1em;
 		}
 		
 	}

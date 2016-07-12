@@ -1,9 +1,6 @@
 .footer {
 		
-		h4{
-			text-align: center;
-		}
-	
+		
 	.no-js & {
 		/* @base/nojs for fallbacks */
 	}
@@ -11,8 +8,11 @@
 	.js & {
 			
 		h4 {
+			text-align: left;
+			margin: 1.5em 0 .75em;
 			
 			@include screen-small {
+				text-align: center;
 				display: block;
 				margin: 0;
 				background: #BBB;

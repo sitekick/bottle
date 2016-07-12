@@ -1,9 +1,29 @@
+/*=============ANCHOR=============*/
+
+.button{
+	padding: .25em 1em;
+	background: $dkblue;
+	color: $white;
+	display: inline-block;
+
+	&:hover{
+		background: $blue;
+	}
+}
+
 /*=============IMAGE=============*/
 
 .autosize {
 	max-width: 100%;
 	height: auto;
 	display: inline-block;
+}
+
+
+canvas{
+	display: block;
+	width: 100% !important;
+	height: auto !important;
 }
 
 
@@ -23,9 +43,7 @@
 			width: 100%;
 			float: none;
 			}
-		
 	}
-	
 }
 
 /*=============MAIN=================*/
@@ -37,14 +55,6 @@
 		@include screen-medium{
 			position: absolute; 
 			top: 0;
-		}
-	}
-	
-	.blog {
-
-		@include screen-medium{
-			position: absolute; 
-			top: 150px;
 		}
 	}
 	
@@ -126,14 +136,12 @@
 
 table {
 	width: 100%;
-	text-align: center;
+	text-align: left;
+	color: $dkblue;
 }
 
-thead {
-	background: #000;
-	color: #FFF;
-	font-weight: bold;
-	
+thead th{
+	border-bottom: 2px solid $dkblue;
 }
 
 th:nth-child(2),
@@ -142,19 +150,24 @@ td:nth-child(2) {
 }
 
 tbody {
-	color: #666;
 
 	td{
-		padding: .25em 5px;
+		padding: .25em 0 .25em 5px;
 	}
 
 	tr{
 		cursor: pointer;
 	
-		&:nth-child(even) td{
+	&:nth-child(even) td{
 		background: #D9F0F7;
 		border-top: 1px solid rgba(0,0,0, .05);
-		}
+	}
+	
+	&:hover td{
+		background: $blue;
+		color: white;
+	}	
+	
 	
 	}
 
@@ -171,18 +184,6 @@ tbody {
 
 .blog{
 	
-	.logo,
-	.teaser {
-		vertical-align: middle;
-		display: inline-block;
-		
-		@include screen-small{
-		display: block;
-		width: 100%;
-		margin: .5em 0;
-		}
-	}
-	
 	.logo {
 		width: 33%;
 		text-align: center;
@@ -192,7 +193,24 @@ tbody {
 		width: 66%;
 	}
 	
+	.logo,
+	.teaser {
+		vertical-align: middle;
+		display: inline-block;
+		
+		@include screen-small{
+			display: block;
+			width: 100%;
+			margin: .5em 0;
+		}
+	}
+	
 	.software & {
+		
+		@include screen-medium{
+			position: absolute; 
+			top: 150px;
+		}
 		
 		@include screen-small{
 			top: 175px;
@@ -247,7 +265,7 @@ tbody {
 	 
 	 h4 {
 		 @include screen-large {
-			 	margin: 1.5em 0 .5em 0;
+			 	margin: 0 0 .5em 0;
 			 }
 	 }
 	 
@@ -270,7 +288,7 @@ hr{
 	/* Parents */
 	#footer &{
 		visibility: visible;
-	
+
 		 @include screen-small {
 			visibility: hidden;
 		}

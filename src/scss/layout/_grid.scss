@@ -6,8 +6,9 @@
 	display: table;
 /* Classes */	
 &.brand{
-	z-index: 3;
-			
+	z-index: 3;	
+	padding-bottom: 1em;	
+	
 		.column{
 			vertical-align: bottom;
 			text-align: center;
@@ -21,12 +22,18 @@
 &.slider{
 	z-index: 1;
 	background: $black;
-			
+		
 		.column{
 			vertical-align: middle;
 			
 		&.col3{
 			color: $white;
+			padding-bottom: 10px;
+			
+			@include screen-medium{
+// 				min-height: 125px;
+				text-align: center;
+			}
 		}
 		}
 }
@@ -39,7 +46,7 @@
 	}
 	
 		#main &{
-			margin-bottom: 2em;
+			margin: 3em 0 3em;
 		}
 	
 	.footer & {
@@ -60,8 +67,8 @@
 	}
 	
 	.floater & { //.floater .row
-		width: calc(100% - 3em);
-		margin-left: 1.5em;
+		width: calc(100% - 2em);
+		margin-left: 1em;
 		display: block; 
 		
 		.column {
@@ -104,6 +111,11 @@
 			
 			@include screen-large {
  				width: 50%;
+ 				vertical-align: top;
+			}
+			@include screen-small {
+ 				width: 100%;
+ 				text-align: center;
 			}
 		
 		}
@@ -112,6 +124,9 @@
  			
  			@include screen-large {
  				text-align: right;
+			}
+			@include screen-small {
+ 				text-align: center;
 			}
 		}
 		
@@ -129,28 +144,27 @@
 				display: table-cell;
 				vertical-align: middle;
 			
-				@include screen-small {
+				@include screen-medium {
 					display: block;
 					margin: 5px;
 				}
 			}
 		
-			canvas{
-				display: block;
-				width: 100% !important;
-				height: auto !important;
-			}
 		
 			@include screen-large {
 				min-height: 0;
 			}
 		
-			@include screen-small {
-				float: left;
+			@include screen-medium {
 				display: block;
-				margin: 1em 0;
+				margin: 1em auto;
 				padding-right: 0;
-				width: 100%;
+				width: 50%;
+			}
+			
+			@include screen-small {
+				margin: 2em auto;
+				width: 95%;
 			}
 		}
 		
@@ -159,7 +173,7 @@
 			padding: 2em 0;
 		}
 		
-		@include screen-small {
+		@include screen-medium {
 			padding: 0 0;
 		}
 	}

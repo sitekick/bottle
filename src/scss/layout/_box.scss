@@ -64,7 +64,14 @@
 		
 			h1 {
 				margin-bottom: 1em;
+				line-height: 1.25em;
+				
+				@include screen-medium{
+					margin-bottom: .5em;
+				}
 			}
+			
+			
 		}
 		
 		#footer {

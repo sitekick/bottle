@@ -82,6 +82,12 @@ a {
 }
 #header h1 {
   margin-bottom: 1em;
+  line-height: 1.25em;
+}
+@media screen and (max-width: 768px) {
+  #header h1 {
+    margin-bottom: .5em;
+  }
 }
 
 #footer {
@@ -126,6 +132,7 @@ a {
 }
 .row.brand {
   z-index: 3;
+  padding-bottom: 1em;
 }
 .row.brand .column {
   vertical-align: bottom;
@@ -143,6 +150,12 @@ a {
 }
 .row.slider .column.col3 {
   color: #FFF;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .row.slider .column.col3 {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 768px) {
   .main .row {
@@ -150,7 +163,7 @@ a {
   }
 }
 #main .row {
-  margin-bottom: 2em;
+  margin: 3em 0 3em;
 }
 @media screen and (max-width: 500px) {
   .footer .row {
@@ -168,9 +181,9 @@ header .row {
   }
 }
 .floater .row {
-  width: -webkit-calc(100% - 3em);
-  width: calc(100% - 3em);
-  margin-left: 1.5em;
+  width: -webkit-calc(100% - 2em);
+  width: calc(100% - 2em);
+  margin-left: 1em;
   display: block;
 }
 .floater .row .column {
@@ -212,11 +225,23 @@ header .row {
 @media screen and (max-width: 1024px) {
   .floater.address .row .column {
     width: 50%;
+    vertical-align: top;
+  }
+}
+@media screen and (max-width: 500px) {
+  .floater.address .row .column {
+    width: 100%;
+    text-align: center;
   }
 }
 @media screen and (max-width: 1024px) {
   .floater.address .row .social {
     text-align: right;
+  }
+}
+@media screen and (max-width: 500px) {
+  .floater.address .row .social {
+    text-align: center;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -231,29 +256,29 @@ header .row {
   display: table-cell;
   vertical-align: middle;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .floater.graphs .row .column .graph {
     display: block;
     margin: 5px;
   }
-}
-.floater.graphs .row .column canvas {
-  display: block;
-  width: 100% !important;
-  height: auto !important;
 }
 @media screen and (max-width: 1024px) {
   .floater.graphs .row .column {
     min-height: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .floater.graphs .row .column {
+    display: block;
+    margin: 1em auto;
+    padding-right: 0;
+    width: 50%;
+  }
+}
 @media screen and (max-width: 500px) {
   .floater.graphs .row .column {
-    float: left;
-    display: block;
-    margin: 1em 0;
-    padding-right: 0;
-    width: 100%;
+    margin: 2em auto;
+    width: 95%;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -262,7 +287,7 @@ header .row {
     padding: 2em 0;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .floater.graphs .row {
     padding: 0 0;
   }
@@ -322,11 +347,28 @@ header .row {
   }
 }
 
+/*=============ANCHOR=============*/
+.button {
+  padding: .25em 1em;
+  background: #006C8F;
+  color: #FFF;
+  display: inline-block;
+}
+.button:hover {
+  background: #0099CC;
+}
+
 /*=============IMAGE=============*/
 .autosize {
   max-width: 100%;
   height: auto;
   display: inline-block;
+}
+
+canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
 }
 
 /*=============HEADER=================*/
@@ -350,12 +392,6 @@ header .row {
   .software .panel {
     position: absolute;
     top: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .software .blog {
-    position: absolute;
-    top: 150px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -429,13 +465,12 @@ header .row {
 /*--------------Table----------------*/
 table {
   width: 100%;
-  text-align: center;
+  text-align: left;
+  color: #006C8F;
 }
 
-thead {
-  background: #000;
-  color: #FFF;
-  font-weight: bold;
+thead th {
+  border-bottom: 2px solid #006C8F;
 }
 
 th:nth-child(2),
@@ -443,11 +478,8 @@ td:nth-child(2) {
   text-align: left;
 }
 
-tbody {
-  color: #666;
-}
 tbody td {
-  padding: .25em 5px;
+  padding: .25em 0 .25em 5px;
 }
 tbody tr {
   cursor: pointer;
@@ -455,6 +487,10 @@ tbody tr {
 tbody tr:nth-child(even) td {
   background: #D9F0F7;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+tbody tr:hover td {
+  background: #0099CC;
+  color: white;
 }
 
 /*--------------Blog----------------*/
@@ -464,6 +500,13 @@ tbody tr:nth-child(even) td {
   height: 350px;
 }
 
+.blog .logo {
+  width: 33%;
+  text-align: center;
+}
+.blog .teaser {
+  width: 66%;
+}
 .blog .logo,
 .blog .teaser {
   vertical-align: middle;
@@ -477,12 +520,11 @@ tbody tr:nth-child(even) td {
     margin: .5em 0;
   }
 }
-.blog .logo {
-  width: 33%;
-  text-align: center;
-}
-.blog .teaser {
-  width: 66%;
+@media screen and (max-width: 768px) {
+  .software .blog {
+    position: absolute;
+    top: 150px;
+  }
 }
 @media screen and (max-width: 500px) {
   .software .blog {
@@ -525,7 +567,7 @@ tbody tr:nth-child(even) td {
 }
 @media screen and (max-width: 1024px) {
   .floater h4 {
-    margin: 1.5em 0 .5em 0;
+    margin: 0 0 .5em 0;
   }
 }
 .floater p {
@@ -567,110 +609,110 @@ hr {
   }
 }
 
-nav,
-h1,
-h2 {
-  font-family: 'Cabin', sans-serif;
-}
-
-body, input {
-  font-family: 'Lato', sans-serif;
+body {
+  font-family: "Lato", sans-serif;
   font-size: 100%;
   font-weight: 300;
+  line-height: 1.5;
 }
-
-input {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.0625em;
+    line-height: 1.6;
+  }
 }
-
-h1, h2 {
-  font-weight: 400;
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 1.125em;
+    line-height: 1.7;
+  }
 }
 
 h1 {
-  font-size: 1.5em;
-  color: #09C;
+  font-size: 1.6em;
+  font-weight: 400;
+  color: #FFF;
 }
 
 h2 {
+  font-family: "Cabin", sans-serif;
   font-size: 1.3125em;
+  font-weight: 400;
+}
+.revealpanel h2 {
+  font-style: italic;
 }
 
-h3, h4, th {
+h3 {
+  font-size: 1.25em;
   font-weight: 700;
 }
 
-h3, h5, input, select {
+h4 {
   font-size: 1.125em;
+  font-weight: 700;
 }
 
-h5, h6 {
+h5 {
+  font-size: 1.125em;
   font-weight: 300;
 }
 
 h6 {
   font-size: 1em;
+  font-weight: 300;
 }
 
+nav {
+  font-family: "Cabin", sans-serif;
+  line-height: 1.25;
+}
 nav .level1 {
   font-size: 1.25em;
   font-weight: 400;
 }
-
 nav .level2 {
   font-family: 'Lato', sans-serif;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 300;
 }
 
-.revealpanel h2 {
-  font-style: italic;
+th {
+  font-weight: 700;
+  font-size: 1.125em;
 }
 
-#main select {
-  font-family: 'Cabin', sans-serif;
-  font-size: 1.5em;
-  font-weight: 400;
+input {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.125em;
 }
-
 #header input[type="text"] {
   font-weight: 700;
 }
 
-#header ::-webkit-input-placeholder {
+select {
+  font-size: 1.125em;
+}
+#main select {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+::-webkit-input-placeholder {
   font-weight: 300;
 }
 
-#header ::-moz-placeholder {
+::-moz-placeholder {
   font-weight: 300;
 }
 
-#header :-ms-input-placeholder {
+:-ms-input-placeholder {
   font-weight: 300;
 }
 
-#header ::placeholder {
-  font-weight: 300;
-}
-
-#header ::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  font-weight: 300;
-}
-
-#header ::-moz-placeholder {
-  /* Firefox 19+ */
-  font-weight: 300;
-}
-
-#header :-ms-input-placeholder {
-  /* IE 10+ */
-  font-weight: 300;
-}
-
-#header :-moz-placeholder {
-  /* Firefox 18- */
+::placeholder {
   font-weight: 300;
 }
 
@@ -708,6 +750,7 @@ nav .level2 {
 }
 .social .menu li {
   display: inline-block;
+  margin: 0 .5em 0 0;
   width: 32px;
   height: 32px;
   background: #000;
@@ -754,6 +797,11 @@ nav .level2 {
 }
 .social .menu li span {
   display: none;
+}
+@media screen and (max-width: 500px) {
+  .social .menu li {
+    margin: 0 1em;
+  }
 }
 .footer .menu li {
   display: list-item;
@@ -854,22 +902,30 @@ nav .level2 {
     background: inherit;
     display: block;
     text-align: left;
-    padding: .25em .5em .25em 2em;
     /* Classes */
   }
   nav .level2 > li:first-child {
-    padding-top: 2em;
+    padding-top: 1em;
   }
   nav .level2 > li:last-child {
     padding-bottom: 2em;
   }
-  nav .level2 > li > a {
+  nav .level2 > li a {
+    display: block;
     color: #FFF;
+    padding: 0 .5em .5em 2em;
   }
-  nav .level2 > li > a:hover {
+  nav .level2 > li a:hover {
     color: #FFF;
     text-decoration: underline;
   }
+}
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  nav .level2 > li a {
+    padding: 0 .1em .5em .5em;
+  }
+}
+@media screen and (min-width: 500px) {
   .no-js nav .level2 {
     opacity: 0;
     left: -9999px;
@@ -1021,6 +1077,7 @@ nav .level2 {
   margin-top: 4px;
   margin-left: -4px;
   font-weight: 300;
+  padding-bottom: 10px;
 }
 
 .autocomplete-suggestion {
@@ -1051,14 +1108,16 @@ select {
   color: #0099CC;
 }
 
-.footer h4 {
-  text-align: center;
-}
 .no-js .footer {
   /* @base/nojs for fallbacks */
 }
+.js .footer h4 {
+  text-align: left;
+  margin: 1.5em 0 .75em;
+}
 @media screen and (max-width: 500px) {
   .js .footer h4 {
+    text-align: center;
     display: block;
     margin: 0;
     background: #BBB;

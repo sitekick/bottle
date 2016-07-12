@@ -10,10 +10,19 @@
 $black				: #000;
 $white				: #FFF;
 $blue				: #0099CC;
+$dkblue				: #006C8F;
+$ltblue				: #D9F0F7;
 $grey				: #BBB;
 $borderHighlight	: #CCC;
 $borderLowlight		: #AAA;
 
+$lato 				: 'Lato', sans-serif;
+$cabin				: 'Cabin', sans-serif;
+
+$screen-full		: 1324px;
+$screen-large		: 1024px;
+$screen-medium		: 768px;
+$screen-small		: 500px;
 
 $socialNets : (
 	('google',0,#DA4A34),
@@ -23,7 +32,3 @@ $socialNets : (
 );
 
 	 
-$screen-full		: 1324px;
-$screen-large		: 1024px;
-$screen-medium		: 768px;
-$screen-small		: 500px;
