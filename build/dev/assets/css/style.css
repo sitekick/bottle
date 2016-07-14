@@ -113,6 +113,11 @@ a {
     margin-bottom: 2em;
   }
 }
+@media screen and (max-width: 768px) {
+  .floater {
+    margin-top: 2em;
+  }
+}
 @media screen and (max-width: 500px) {
   .floater {
     width: 100%;
@@ -181,28 +186,24 @@ header .row {
   }
 }
 .floater .row {
-  width: -webkit-calc(100% - 2em);
-  width: calc(100% - 2em);
-  margin-left: 1em;
+  width: -webkit-calc(100% - 1em);
+  width: calc(100% - 1em);
+  margin-left: .5em;
   display: block;
 }
 .floater .row .column {
   display: block;
   padding-right: 0;
   width: 100%;
-  margin: 1em 0;
 }
 @media screen and (max-width: 1024px) {
   .floater .row .column {
-    margin: 0;
     display: table-cell;
   }
 }
 @media screen and (max-width: 500px) {
   .floater .row .column {
     display: block;
-    margin: 1em 0;
-    padding-right: 0;
     width: 100%;
   }
 }
@@ -220,6 +221,37 @@ header .row {
     margin-left: 1.5em;
     display: block;
     overflow: hidden;
+  }
+}
+.floater.graphs .row .column {
+  padding-top: 2em;
+  padding-bottom: 5em;
+}
+@media screen and (max-width: 1024px) {
+  .floater.graphs .row .column {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .floater.graphs .row .column {
+    display: block;
+    margin: 0 auto;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    padding-right: 0;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .floater.graphs .row .column {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .floater.graphs .row {
+    background: #BBB;
+    padding: 1em 0;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -247,49 +279,6 @@ header .row {
 @media screen and (max-width: 1024px) {
   .floater.address .row {
     color: #000;
-  }
-}
-.floater.graphs .row .column {
-  min-height: 300px;
-}
-.floater.graphs .row .column .graph {
-  display: table-cell;
-  vertical-align: middle;
-}
-@media screen and (max-width: 768px) {
-  .floater.graphs .row .column .graph {
-    display: block;
-    margin: 5px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .floater.graphs .row .column {
-    min-height: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .floater.graphs .row .column {
-    display: block;
-    margin: 1em auto;
-    padding-right: 0;
-    width: 50%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .floater.graphs .row .column {
-    margin: 2em auto;
-    width: 95%;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .floater.graphs .row {
-    background: #BBB;
-    padding: 2em 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .floater.graphs .row {
-    padding: 0 0;
   }
 }
 .row .col1, .row .col2, .row .col12 {
@@ -321,6 +310,7 @@ header .row {
 @media screen and (max-width: 1024px) {
   .floater .row .col3 {
     width: 31.65984%;
+    padding-right: .5em;
   }
 }
 .row .colspan {
@@ -366,7 +356,6 @@ header .row {
 }
 
 canvas {
-  display: block;
   width: 100% !important;
   height: auto !important;
 }

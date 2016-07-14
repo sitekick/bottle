@@ -1,86 +1,100 @@
 $(function() {
 	
-	var data_chart1 = [
-	    {
-	        value: 300,
-	        color:"#F7464A",
-	        highlight: "#FF5A5E",
-	        label: "Red"
-	    },
-	    {
-	        value: 50,
-	        color: "#46BFBD",
-	        highlight: "#5AD3D1",
-	        label: "Green"
-	    },
-	    {
-	        value: 100,
-	        color: "#FDB45C",
-	        highlight: "#FFC870",
-	        label: "Yellow"
-	    }
-	];
-	var data_chart2 = [
-				{
-					value: 9.99,
-					color:"#006C8F",
-					highlight: "#9900CC",
-					label: "Americas"
-				},
-				{
-					value: 5.18,
-					color: "#0099CC",
-					highlight: "#9900CC",
-					label: "EMEA"
-				},
-				{
-					value: 3.33,
-					color: "#D9F0F7",
-					highlight: "#9900CC",
-					label: "Asia Pacific"
-				}
-			];
-			
-	var data_chart3 = {
-		labels : ["January","February","March"],
-		datasets : [
-			{
-				fillColor : "#0099CC",
-				strokeColor : "rgba(220,220,220,0.8)",
-				highlightFill: "rgba(220,220,220,0.75)",
-				highlightStroke: "rgba(220,220,220,1)",
-				data: [65, 59, 80]
-			},
-			{
-				fillColor : "#D9F0F7",
-				strokeColor : "rgba(151,187,205,0.8)",
-				highlightFill : "rgba(151,187,205,0.75)",
-				highlightStroke : "rgba(151,187,205,1)",
-				data: [27, 41, 69]
-			}
-		]
-	};
 	
-			var ctx1 = $("#chart1").get(0).getContext("2d");
-			var myPolar = new Chart(ctx1).PolarArea(data_chart1, {
-				responsive : true,
-				maintainAspectRatio: true
+	$.getJSON('assets/data/charts.json', function(data){
+		
+		buildCharts(data.charts);
+	
+	});
+
+		 
+function buildCharts(data){
+	
+		Chart.defaults.global.defaultFontColor = '#EEE';
+		Chart.defaults.global.defaultFontFamily = 'Lato, sans-serif';
+		Chart.defaults.global.defaultFontSize = 14;
+	
+		/* Investors Chart 1: Profit Margin */		
+
+		var can1 = document.getElementById('chart1');
+		can1.height = 200;
+		var ctx1 = can1.getContext('2d');
+
+		
+		var myLine = new Chart(ctx1, {
+				type: 'line',
+				data: data.investor.profitMargin,
+				options: {
+					responsive: false,
+					tooltips: {
+						callbacks: {
+							title: function() {
+								return '';
+							},
+							label: function(tooltipItem, data) {
+								return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + '%';
+                  			}
+						}
+					},
+					legend: {
+						display: false
+						}
+				}
 			});
-			
-			var ctx2 = $("#chart2").get(0).getContext("2d");
-			var myPie = new Chart(ctx2).Pie(data_chart2, {
-				responsive : true,
-				maintainAspectRatio: true,
-				segmentShowStroke : false,
-				animationEasing : "easeOutQuad"
-			});
-			
-			var ctx3 = $("#chart3").get(0).getContext("2d");
-			var myPie = new Chart(ctx3).Bar(data_chart3, {
-				responsive : true,
-				maintainAspectRatio: true,
-				barShowStroke : false
-			});
+				
+		
+			/* Investors Chart 2: Annual Revenue */
+	
+			var can2 = document.getElementById('chart2');
+			can2.height = 200;
+			var ctx2 = can2.getContext('2d');
+
+			var myPie = new Chart(ctx2,{
+				type: 'doughnut',
+				data: data.investor.annualRevenue,
+				options: {
+					responsive: false,
+					tooltips: {
+						callbacks: {
+							title: function() {
+								return 'FY 2015';
+							},
+							label: function(tooltipItem, data) {
+								return data.labels[tooltipItem.index] + ': $' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + ' B';
+                  			}
+						}
+					},
+					legend: {
+						display: true,
+						position: 'bottom',
+					labels:{
+						boxWidth: 15
+					}
+				}
+			}
+		});
+
+		/* Investors Chart 3: PS Ratio */
+		
+		var can3 = document.getElementById('chart3');
+		can3.height = 200;
+		var ctx3 = can3.getContext('2d');
+		
+		var myBar = new Chart(ctx3,{
+			type: 'bar',
+			data: data.investor.psRatio,
+			options : {
+				responsive: false,
+				legend: {
+					display: false
+					}
+			}
+		});
+
+
+}	
+	
+
 })
 
 
