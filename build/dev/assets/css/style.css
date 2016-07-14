@@ -132,8 +132,25 @@ a {
 .row {
   width: 100%;
   display: table;
+  /* Parents */
   /* Classes */
   /* Parents */
+}
+.flexbox .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .flexbox .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .row.brand {
   z-index: 3;
@@ -163,12 +180,14 @@ a {
   }
 }
 @media screen and (max-width: 768px) {
-  .main .row {
-    display: block;
+  .flexbox .row.software {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    position: relative;
+    top: 0;
   }
-}
-#main .row {
-  margin: 3em 0 3em;
 }
 @media screen and (max-width: 500px) {
   .footer .row {
@@ -318,6 +337,8 @@ header .row {
 }
 .row .column {
   display: table-cell;
+  /* Parents */
+  /* Classes */
 }
 @media screen and (max-width: 768px) {
   .main .row .column {
@@ -330,11 +351,45 @@ header .row {
   margin-bottom: 1em;
   vertical-align: top;
 }
+@media screen and (max-width: 768px) {
+  .software .row .column {
+    position: absolute;
+    top: 150px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .software .row .column {
+    top: 175px;
+  }
+}
 @media screen and (max-width: 500px) {
   .footer .row .column {
     display: block;
     width: 100%;
   }
+}
+.row .column.blog .logo {
+  width: 33%;
+  text-align: center;
+}
+.row .column.blog .teaser {
+  width: 66%;
+}
+.row .column.blog .logo,
+.row .column.blog .teaser {
+  vertical-align: middle;
+  display: inline-block;
+}
+@media screen and (max-width: 500px) {
+  .row .column.blog .logo,
+  .row .column.blog .teaser {
+    display: block;
+    width: 100%;
+    margin: .5em 0;
+  }
+}
+.flexbox .row .column {
+  display: block;
 }
 
 /*=============ANCHOR=============*/
@@ -384,9 +439,17 @@ canvas {
   }
 }
 @media screen and (max-width: 768px) {
+  .flexbox .software .panel {
+    position: relative;
+  }
+}
+@media screen and (max-width: 768px) {
   .software {
     position: relative;
     height: 525px;
+  }
+  .flexbox .software {
+    height: auto;
   }
 }
 @media screen and (max-width: 500px) {
@@ -489,38 +552,46 @@ tbody tr:hover td {
   height: 350px;
 }
 
-.blog .logo {
-  width: 33%;
-  text-align: center;
+/*
+.blog{
+	
+	.logo {
+		width: 33%;
+		text-align: center;
+	}
+	
+	.teaser {
+		width: 66%;
+	}
+	
+	.logo,
+	.teaser {
+		vertical-align: middle;
+		display: inline-block;
+		
+		@include screen-small{
+			display: block;
+			width: 100%;
+			margin: .5em 0;
+		}
+	}
+	
+	.software & {
+		
+		@include screen-medium{
+			
+			position: absolute; 
+			top: 150px;
+			}
+		
+		@include screen-small{
+			top: 175px;
+		}
+			
+	}
+	
 }
-.blog .teaser {
-  width: 66%;
-}
-.blog .logo,
-.blog .teaser {
-  vertical-align: middle;
-  display: inline-block;
-}
-@media screen and (max-width: 500px) {
-  .blog .logo,
-  .blog .teaser {
-    display: block;
-    width: 100%;
-    margin: .5em 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .software .blog {
-    position: absolute;
-    top: 150px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .software .blog {
-    top: 175px;
-  }
-}
-
+*/
 /*-----Reveal Panels--------*/
 .products .col1 {
   position: relative;

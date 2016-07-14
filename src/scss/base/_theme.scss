@@ -55,13 +55,27 @@ canvas{
 			position: absolute; 
 			top: 0;
 		}
+		
+		.flexbox &{
+			
+			@include screen-medium{
+				position: relative;
+			}
+			
+		}
 	}
+	
+	
 	
 	/* Media Queries */
 	
 	@include screen-medium{
 		position: relative;
 		height: 525px;
+		
+		.flexbox &{
+			height: auto;
+		}
 	}
 	@include screen-small {
 		height: 600px;
@@ -181,6 +195,7 @@ tbody {
 	height: 350px;
 }
 
+/*
 .blog{
 	
 	.logo {
@@ -207,17 +222,19 @@ tbody {
 	.software & {
 		
 		@include screen-medium{
+			
 			position: absolute; 
 			top: 150px;
-		}
+			}
 		
 		@include screen-small{
 			top: 175px;
 		}
-		
+			
 	}
 	
 }
+*/
 
 /*-----Reveal Panels--------*/
 

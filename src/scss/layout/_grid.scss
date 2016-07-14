@@ -4,6 +4,18 @@
 .row {
 	width: 100%;
 	display: table;
+
+/* Parents */
+.flexbox &{
+	display: flex;
+	align-items: flex-start;
+	
+	
+	@include screen-medium{
+		flex-direction: column;
+	}
+}
+
 /* Classes */	
 &.brand{
 	z-index: 3;	
@@ -36,17 +48,28 @@
 			}
 		}
 		}
+	}
+&.software {
+	
+	.flexbox & {
+			
+			@include screen-medium{
+				flex-direction: column-reverse;
+				position: relative; 
+				top: 0;
+			}
+		}
 }
 /* Parents */		
 	.main &{ 
 		
 		@include screen-medium{
-			display: block;
+// 			display: block;
 		}
 	}
 	
 		#main &{
-			margin: 3em 0 3em;
+// 			margin: 3em 0 3em;
 		}
 	
 	.footer & {
@@ -211,29 +234,74 @@
 	.column {
 		display: table-cell;
 	
-		.main & {
+	/* Parents */
+	.main & {
 					
-				@include screen-medium{
-					display: block;
-					padding-right: 0;
-					width: 100%;
-					}
+			@include screen-medium{
+				display: block;
+				padding-right: 0;
+				width: 100%;
+				}
 	
-		}
+	}
 		
-			#main &{
-				margin-bottom: 1em;	
-				vertical-align: top;
+	#main &{
+			margin-bottom: 1em;	
+			vertical-align: top;
+	}
+	
+	.software & {
+		
+		@include screen-medium{
+			
+			position: absolute; 
+			top: 150px;
 			}
 		
-		.footer & {
-				
-				@include screen-small  {
-					display: block;
-					width: 100%;
-				}
+		@include screen-small{
+			top: 175px;
 		}
-	}// .column
+			
+	}
+	
+		
+	.footer & {
+				
+			@include screen-small  {
+				display: block;
+				width: 100%;
+			}
+	}
+	
+	/* Classes */
+	&.blog {
+	
+		.logo {
+			width: 33%;
+			text-align: center;
+		}
+	
+		.teaser {
+			width: 66%;
+		}
+	
+		.logo,
+		.teaser {
+			vertical-align: middle;
+			display: inline-block;
+			
+			@include screen-small{
+				display: block;
+				width: 100%;
+				margin: .5em 0;
+			}
+		}
+	}
+	.flexbox & {
+		display: block;
+	}
+	
+	}
 
 }// .row
 
