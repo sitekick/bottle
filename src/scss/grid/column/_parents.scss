@@ -1,0 +1,35 @@
+// Column Parents *
+	
+	.slider & {
+			vertical-align: middle;
+	}
+	
+	
+	.main & {
+					
+			@include screen-medium{
+				display: block;
+				width: 100%;
+				}
+	}
+		
+	#main &{
+		vertical-align: top;
+		
+			@include screen-medium{
+				padding: 1em 0;
+				}
+	}
+	
+	.brand & {
+		vertical-align: bottom;
+		text-align: center;
+	}	
+	
+	.footer & {
+				
+			@include screen-small  {
+				display: block;
+				width: 100%;
+			}
+	}

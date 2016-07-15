@@ -5,7 +5,7 @@
 		.level1 {
 			display: table;
 			width: 100%;
-		
+			vertical-align: top;
 			> li {
 			display: table-cell;
 			width: 34.1700819672%;
@@ -29,8 +29,8 @@
 					color: #09C;
 				}
 				}
-		
-			}
+	
+			} // .level1 li
 		
 		/* Parents */
 		.no-js &{
@@ -53,38 +53,48 @@
 			border-bottom-color: #09C;
 			border-bottom-style: solid;
 			opacity: 0;
+			line-height: 1.25;
 			
 			> li{
 				background: inherit;
 				display: block;
 				text-align: left;
 			
-			/* Classes */
-			&:first-child{
-				padding-top: 1em;
-			}
-			
-			&:last-child{
-				padding-bottom: 2em;
-			}
-				
 
 				a{
 					display: block;
 					color: #FFF;
-					padding: 0 .5em .5em 2em;
+					padding-top: .25em;
+					padding-right: .5em;
+					padding-bottom: .25em;
+					padding-left: 2em;
 				
+					
 				&:hover{
 					color: #FFF;
 					text-decoration: underline;
 				}
 				
-					@include screen-medium{
-						padding: 0 .1em .5em .5em;
+					@include screen-large {
+						padding-right: .25em;
+						padding-left: 1em;
 					}
+				
+					@include screen-medium {
+						padding-right: .25em;
+					}
+
 				}
-			
+
+			&:first-child {
+				
+				a {
+					padding-top: 1em;
+				}
+				
 			}
+
+			}// .level2 li
 				
 				
 		/* Parents */

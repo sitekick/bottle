@@ -11,11 +11,13 @@ module.exports = {
 	scripts: {
 		//src:  srcAssets + '/scripts/**/*.{js,json}',
 		//src:  src + 'js/*.{js,json}',
-		src:  src + 'js/*.js',
+		//exclude: [],
+		src:  [src + 'js/**/*.js','!' + src + 'js/arch/**/*'],
 		dest: dist + dev + 'assets/js'
 	},
 	images: {
 		//src:  srcAssets + '/img/**/*',
+		
 		src:  [src  + 'img/*',src + '/img/**/*'],
 		dest: dist + dev + 'assets/img'
 	},

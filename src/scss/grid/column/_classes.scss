@@ -1,0 +1,26 @@
+// Column Classes 
+
+
+&.blog {
+	
+		.logo {
+			width: 33%;
+			text-align: center;
+		}
+	
+		.teaser {
+			width: 66%;
+		}
+	
+		.logo,
+		.teaser {
+			vertical-align: middle;
+			display: inline-block;
+			
+			@include screen-small{
+				display: block;
+				width: 100%;
+				margin: .5em 0;
+			}
+		}
+}

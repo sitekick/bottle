@@ -10,6 +10,16 @@
 		background: $blue;
 	}
 }
+a {
+	text-decoration: none;
+	color: $blue;
+	
+	.revealpanel &{
+		color: $white;
+	}
+	
+}
+
 
 /*=============IMAGE=============*/
 
@@ -29,7 +39,7 @@ canvas{
 /*=============HEADER=================*/
 
 #login {
-
+	
 	h5{
 		padding: .25em;
 		text-align: left;
@@ -47,104 +57,82 @@ canvas{
 
 /*=============MAIN=================*/
 
-.software {
-	
-	.panel {
-		
-		@include screen-medium{
-			position: absolute; 
-			top: 0;
-		}
-		
-		.flexbox &{
-			
-			@include screen-medium{
-				position: relative;
-			}
-			
-		}
-	}
-	
-	
-	
-	/* Media Queries */
-	
-	@include screen-medium{
-		position: relative;
-		height: 525px;
-		
-		.flexbox &{
-			height: auto;
-		}
-	}
-	@include screen-small {
-		height: 600px;
-	}
-}
+/*-----Reveal Panels--------*/
 
 
-.resources {
+.revealpanel  {
+	background: $blue;
+	overflow: hidden;
+
+	.wrapper {
+		background: rgba(0,0,0, .3);
+		padding: 1.5em .75em .75em .75em;
+		min-height: 100px;
 	
-	h3{
-		margin-bottom: .5em;
-	
-		@include screen-medium{
-			margin: 0 .5em 0 0;
-		}
+	.products & {
+		margin: .75em 0 0 .75em;
+		
+	}
+		
+	.software & {
+		margin: 0 .75em .75em 0;
+		text-align: right;
 	}
 	
-	> * {
-		
+	} // .wrapper
+
+	h2{
+		color: $ltblue;
+		margin-bottom: 1em;
+	}
+	
+	ul {
+		display: block;
+				
 		@include screen-medium{
 			display: inline-block;
 		}
 		@include screen-small{
 			display: block;
-		}
-		
-	}
-	
-	/* Parents */
-	.products & {
-		text-align: right;
-	}
-	
-	/* Media Queries */
-	@include screen-small{
-		text-align: center;
-	}
-	
+		}	
+	}		
 }
 
- .revealpanel  {
-	background: $blue;
-	color: $white;
-	overflow: hidden;
-	margin-bottom: 1em;
+/* Positioned element */
 
-	h2{
-		display: block;
-		padding: 1.5em .75em .75em .75em;
-		background: rgba(0,0,0, .3);
-		min-height: 100px;
-	
-		.products & {
-			margin: .75em 0 0 .75em;
-		}
-		
-		.software & {
-			margin: 0 .75em .75em 0;
-		}
-		
-		@include screen-medium{
-			min-height: 0;
-			padding: .75em;
-		}
-
-	}
-	
+.products .col1 {
+	position: relative;
 }
 
+#product-details {
+	position: absolute; 
+	z-index: 100;
+	background: $white;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	.product-detail {
+		padding-right: 7.2072%;
+		
+			> div{
+				display: block;
+			}
+			
+			.photo{
+				text-align: center;
+			}
+			
+			img{
+				width: 150px;
+				height: auto;
+				display: inline-block;
+			}
+	}
+}
+
+ 
 /*--------------Table----------------*/
 
 table {
@@ -186,118 +174,7 @@ tbody {
 
 }
 
-
-/*--------------Blog----------------*/
-
-.scrollwrap {
-	overflow-y: auto;
-	overflow-x: hidden;
-	height: 350px;
-}
-
-/*
-.blog{
-	
-	.logo {
-		width: 33%;
-		text-align: center;
-	}
-	
-	.teaser {
-		width: 66%;
-	}
-	
-	.logo,
-	.teaser {
-		vertical-align: middle;
-		display: inline-block;
-		
-		@include screen-small{
-			display: block;
-			width: 100%;
-			margin: .5em 0;
-		}
-	}
-	
-	.software & {
-		
-		@include screen-medium{
-			
-			position: absolute; 
-			top: 150px;
-			}
-		
-		@include screen-small{
-			top: 175px;
-		}
-			
-	}
-	
-}
-*/
-
-/*-----Reveal Panels--------*/
-
-.products .col1 {
-	position: relative;
-}
-
-#product-details {
-	position: absolute; 
-	z-index: 100;
-	background: $white;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-
-	.product-detail {
-		padding-right: 7.2072%;
-		
-			> div{
-				display: block;
-			}
-			
-			.photo{
-				text-align: center;
-			}
-			
-			img{
-				width: 150px;
-				height: auto;
-				display: inline-block;
-			}
-	}
-}
-	
-/*=============ASIDE============*/
-
-
-.floater {
-
-	 h3 {
-		margin-bottom: .25em; 
-	 }
-	 
-	 h4 {
-		 @include screen-large {
-			 	margin: 0 0 .5em 0;
-			 }
-	 }
-	 
-	 
-	 p {
-		 margin-bottom: .5em;
-	 }
-}
-	
-.column.social h4 {
-	 display: none;
-}
-	
-
 /*=============RULE=============*/
-
 
 hr{
 	
@@ -331,9 +208,3 @@ hr{
 	
 }
 	
-
-
-
-
-
-

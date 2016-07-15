@@ -1,0 +1,15 @@
+// Row Classes 
+
+&.brand{
+	z-index: 3;
+	padding-bottom: 1em;
+	}
+		
+&.nav {
+	z-index: 2;
+}
+		
+&.slider{
+	z-index: 1;
+	background: $black;
+	}

@@ -1,6 +1,11 @@
 //	_mixins.scss
 //	==============
 
+@mixin screen-full {
+  @media screen and (min-width: #{$screen-full}) {
+    @content;
+  }
+}
 
 @mixin screen-large {
   @media screen and (max-width: #{$screen-large}) {

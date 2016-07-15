@@ -1,0 +1,27 @@
+// Row  Parents 
+	
+	header &{ 	
+		position: relative;
+		background: $white;
+		vertical-align: top; 
+		
+		@include screen-small{
+			position: static;
+			z-index: 1; 
+		}
+	}
+
+	main & {
+		padding: 2em 0;
+	}
+	
+	footer & {
+		
+		@include screen-small  {
+			display: block;
+			}
+	}
+	
+	
+	
+	

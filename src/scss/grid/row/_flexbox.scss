@@ -1,0 +1,38 @@
+.flexbox {
+		
+	.row {
+		display: flex;
+		align-items: flex-start;
+	
+	&.brand {
+		align-items: flex-end;
+	}
+	&.slider {
+		align-items: center;
+	}
+	&.software {
+		
+		@include screen-medium{
+			flex-direction: column-reverse;
+		}
+	}
+	
+	/* Media Query: .flexbox .row */
+	@include screen-medium{
+		flex-direction: column;
+	}
+	}// .row
+
+	.footer {
+		
+		.row{
+			
+			@include screen-medium{
+				flex-direction: row;
+			}
+			@include screen-small{
+				flex-direction: column;
+			}
+		}
+	}
+} // .flexbox

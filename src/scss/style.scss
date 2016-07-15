@@ -8,9 +8,11 @@
 @import "utils/resets";
 
 // Layout
-@import "layout/box";
-@import "layout/grid";
+@import "grid/row";
+@import "grid/column";
+
 // Base
+@import "base/box";
 @import "base/theme";
 @import "base/fonts";
 @import "base/nav"; // List menus other than main menu  
@@ -18,7 +20,7 @@
 
 // Components
 @import "components/menu"; // Main menu 
-@import "components/featured-products";
+@import "components/floater";
 @import "components/form";
 @import "components/footer-menu";
-
+@import "components/flexbox";

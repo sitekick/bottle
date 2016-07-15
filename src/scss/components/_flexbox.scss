@@ -1,0 +1,27 @@
+/* Floater  .*/
+
+.flexbox {
+	
+	.floater {
+		
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+		
+			.item{
+				display: block;
+			}
+			
+			@include screen-large{
+				flex-direction: row;
+			}
+			
+			@include screen-medium {
+				flex-direction: column;
+			}
+		
+		}//.wrapper
+		
+	}//.floater
+	
+}

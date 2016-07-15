@@ -7,7 +7,7 @@
 	margin: 0 0;
 	padding: 0 0;
 
-	.resources & li {
+	.revealpanel & li {
 		display: list-item;
 		margin: 0 0 .25em;
 		
@@ -22,6 +22,7 @@
 	&:after{
 		
 		@include screen-medium{
+			color: $ltblue;
 			content: ' |';
 		}
 	}
@@ -101,8 +102,10 @@
 &.horizontal {
 	
 		li{
-			//@todo is this necesary?
+/*
+			@todo is this necesary?
 			display: inline-block;
+*/
 		}
 }
 }

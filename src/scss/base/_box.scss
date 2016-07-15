@@ -33,7 +33,7 @@
 		}
 	}
 
-	.wrapper {
+	#container > .wrapper {
 		width: (1024px/$screen-full) * 100%;
 		float: left;
 		background: $white;
@@ -82,29 +82,4 @@
 			}
 		}
 
-/* Custom sidebar "floater" */
-
-	.floater {
-		float: right;
-		width: (300px/$screen-full) * 100%;
-		color: #fff;
-		
-		@include screen-large {
-			float: none;
-			width: 95.3125%;
-			margin-left: 2.34375%;
-			margin-bottom: 2em;
-		}
-		@include screen-medium {
-			margin-top: 2em;
-		}
-		@include screen-small {
-			width: 100%;
-			margin-left: 0;
-		}
-
-	&.graphs {
-		text-align: center;
-	}
-	
-	}// .floater
+/* .floater @components/floater */
