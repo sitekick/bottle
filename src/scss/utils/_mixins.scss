@@ -26,11 +26,17 @@
 }
 
 
-@mixin socialNetworkIcon($offsety, $color) {
-	background-position: $offsety 0;
+@mixin socialNetworkIcon32($offsetx, $color) {
+	background-position: 0 $offsetx ;
 	
 	&:hover {
 		background-color: $color;
 	}
 }
+@mixin socialNetworkIcon64($offsetx, $color) {
+	background-position: 0 ($offsetx * 2) ;
 	
+	&:hover {
+		background-color: $color;
+	}
+}	

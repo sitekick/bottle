@@ -21,6 +21,19 @@
 			}
 		
 		}//.wrapper
+	
+	&.address {
+		
+		.wrapper {
+			@include screen-medium {
+				flex-direction: row;
+			}
+			@include screen-small {
+				flex-direction: column;
+			}
+		}
+	}
+	
 		
 	}//.floater
 	

@@ -18,7 +18,7 @@ module.exports = {
 	images: {
 		//src:  srcAssets + '/img/**/*',
 		
-		src:  [src  + 'img/*',src + '/img/**/*'],
+		src:  [src  + 'img/*',src + 'img/**/*','!' + src + 'img/arch','!' + src + 'img/arch/**/*'],
 		dest: dist + dev + 'assets/img'
 	},
 	data: {
