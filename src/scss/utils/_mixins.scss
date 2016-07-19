@@ -2,7 +2,8 @@
 //	==============
 
 @mixin screen-full {
-  @media screen and (min-width: #{$screen-full}) {
+  //@media screen and (min-width: #{$screen-full}) {
+  @media screen and (min-width: #{$screen-large}) {
     @content;
   }
 }
@@ -40,3 +41,54 @@
 		background-color: $color;
 	}
 }	
+
+@mixin tableDefaults() {
+	tr > *:nth-child(6){
+		/*Price Column*/
+		white-space: nowrap;
+	}
+	tr > *:nth-child(1){
+		/*Image Column*/
+		padding: .35em 0;
+	}
+	input[type=checkbox] {
+		visibility: hidden;
+	}
+}
+
+@mixin tableDisplayLarge() {
+		
+		//hide image(nth-1); manufacturer(nth-2); description(nth-3);
+		th:nth-child(1),
+		td:nth-child(1),
+		th:nth-child(2),
+		td:nth-child(2),
+		th:nth-child(3),
+		td:nth-child(3) {
+			display: none;
+		};	
+}
+@mixin tableDisplayMedium() {
+		// show image
+		th:nth-child(1),
+		td:nth-child(1){
+			display: table-cell;
+		};
+		
+		img {
+				max-width: 75px;
+				display: block;
+				vertical-align: baseline;
+				margin: 0 .25em;
+			}
+}
+@mixin tableDisplaySmall() {
+		//hide part number(nth-4);
+		th:nth-child(4),
+		td:nth-child(4) {
+			display: none;
+		};	
+		img {
+				max-width: 50px;
+			}
+}

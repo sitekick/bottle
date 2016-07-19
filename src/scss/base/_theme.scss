@@ -147,21 +147,34 @@ table {
 	width: 100%;
 	text-align: left;
 	color: $dkblue;
+	line-height: 1.25em;
+	
+	&#products {
+		@include tableDefaults();
+		@include tableDisplayLarge();
+		
+		@include screen-medium {
+			@include tableDisplayMedium();	
+			}
+		@include screen-small {
+			@include tableDisplaySmall();	
+			}	
+	}
 }
 
 thead th{
 	border-bottom: 2px solid $dkblue;
 }
 
-th:nth-child(2),
-td:nth-child(2) {
-	text-align: left;
-}
 
 tbody {
 
 	td{
-		padding: .25em 0 .25em 5px;
+		padding: .35em 0 .35em 2px;
+
+		del {
+			opacity: .6;
+		}
 	}
 
 	tr{
@@ -172,12 +185,22 @@ tbody {
 		border-top: 1px solid rgba(0,0,0, .05);
 	}
 	
-	&:hover td{
+	&:hover td,
+	&.focused td{
 		background: $blue;
-		color: white;
-	}	
+		color: $white;
 	
+		a {
+			color: $white;
+		
+		&:focus {
+			outline: none;
+		}
+		
+		}
 	
+	}
+
 	}
 
 }

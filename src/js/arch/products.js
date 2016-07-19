@@ -3,7 +3,8 @@ $(function() {
 		
 		$("#productform select").change(function() {
 			
-			var sel ="";
+			var sel = '';
+			
 			sel += $("#productform select option:selected").val(); 
 			
 			var products = [];
@@ -32,6 +33,7 @@ $(function() {
 				
 				$('#products tbody').children('tr').remove();
 				
+/*
 				switch(sel) {
 						case 'sale' : 
 							buildTable(products['sale']);
@@ -40,24 +42,31 @@ $(function() {
 							buildTable(products['featured']);
 							break;
 					}
+*/
 				
+				buildTable(products[sel]);
 			});
 			
 
 		}).change();		
 		
 	
+	
+
 	function buildTable(arr) {
 	
 					
 				$.each(arr, function (index, value) {
 						
-				var div = '<tr>' +
-				'<td><img src="assets/img/products/' + value.image + '" alt="" /></td><td>' + value.manufacturer + '</td>' +
-				'<td>' + value.description + '</td>' +
-				'<td>' + value.number + '</td><td>' + value.category + '</td>' +
-				'<td>' + value.price + '</td>' +
-				'</tr>'
+				var div = `<tr>
+				<td>
+				<img src="assets/img/products/${value.image}" alt="" /></td>
+				<td>${value.manufacturer}</td>
+				<td>${value.description} </td>
+				<td>${value.number}</td>
+				<td>${value.category}</td>
+				<td>${value.price}</td>
+				</tr>`;
 					
 				$('#products tbody').append(div);
 					
