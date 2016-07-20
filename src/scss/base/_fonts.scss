@@ -91,15 +91,14 @@ input{
 
 }
 
-select {
-	font-size: 1.125em;
 
-	#main &{
+label {
+		
+	&[for="ui-select"]{	
 		font-family: $cabin;
 		font-size: 1.5em;
 		font-weight: 400;	
 	}
-
 }
 
 ::placeholder {

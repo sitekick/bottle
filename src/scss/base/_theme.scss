@@ -140,6 +140,46 @@ canvas{
 	}
 }
 
+/* software section */
+
+.software .col3 {
+	position: relative;
+}
+
+#blog-photo {
+	position: absolute; 
+	z-index: 100;
+	background: $white;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.software .reveal {
+	 display: none;
+ }
+
+.scrollwrap {
+	
+	article:hover,
+	article.focused{
+		
+		background: $blue;
+		color: $white;
+	
+			a {
+				color: $white;
+			
+			&:focus {
+				outline: none;
+			}
+			
+			}
+	}
+} 
+
+ 
  
 /*--------------Table----------------*/
 
@@ -150,6 +190,8 @@ table {
 	line-height: 1.25em;
 	
 	&#products {
+		margin-top: 1em;
+		
 		@include tableDefaults();
 		@include tableDisplayLarge();
 		

@@ -1,0 +1,43 @@
+{
+	"blog" : {
+		"software" : [{
+				"title" : "Software Article 1",
+				"teaser" : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+				"image1" : "xerox.jpg",
+				"image2" : "copier.jpg",
+				"link" : "#"
+				},{
+				"title" : "Software Article 2",
+				"teaser" : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr. At vero eos et accusam et justo duo dolores et ea rebum.",
+				"image1"  : "dicks.jpg",
+				"image2" : "pointofpurchase.jpg",
+				"link"   : "#"
+				},{
+				"title" : "Software Article 3",
+				"teaser" : "Labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+				"image1"  : "viacom.jpg",
+				"image2" : "meeting.jpg",
+				"link"   : "#"
+				}],
+		"manufacturers" : [{
+				"title" : "Manufacturers Article 1",
+				"teaser" : "Lorem ispum",
+				"image1"  : "logo.jpg",
+				"image2" : "tba.jpg",
+				"link" : "#"
+				},{
+				"title" : "Manufacturers Article 1",
+				"teaser" : "Lorem ispum",
+				"image1"  : "logo.jpg",
+				"image2" : "tba.jpg",
+				"link"   : "#"
+				},{
+				"title" : "Manufacturers Article 1",
+				"teaser" : "Lorem ispum",
+				"image1"  : "logo.jpg",
+				"image2" : "tba.jpg",
+				"link"   : "#"
+				}]
+	}
+}
+	

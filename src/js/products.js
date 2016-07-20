@@ -4,6 +4,8 @@ $(function() {
 			products['featured'] = [];
 			products['sale'] = [];
 		
+		//detect when a screen resize occurs that results in new media query being utilized;
+		//refires products table build mechanism to switch between layout modes;
 		var currentMQ = transitionMq();
 		$(window).resize(function(){ transitionMq() });
 		
@@ -29,7 +31,7 @@ $(function() {
 					}
 				});	
 		
-		
+				//the select field change event fires the build mechanism for the table
 				$("#productform select").change(function() {
 			
 				var sel = '';
@@ -65,7 +67,7 @@ $(function() {
 		}
 	}
 	
-	function transitionMqEvents(mq) {
+	function transitionMqEvents() {
 			//rebuild products table to allow switch between two modes; done by firing change on select input
 			$("#productform select").change();
 		}
@@ -73,7 +75,9 @@ $(function() {
 	function buildTable(arr) {
 	
 				var divs = [];
-				var div,mode;
+				var div;
+				
+				$('table#products tbody').hide();
 				
 				$.each(arr, function (index, value) {
 					var div = `<tr>
@@ -92,14 +96,12 @@ $(function() {
 				
 				if (Modernizr.mq('(min-width: 768px)') ) {	
 				//large screen layout mode; includes custom hover effect	
+					
 					//hover
 					$('#products tbody tr').hover(	
 						function () {
 							activateRevealPanel(this);
-								},
-						function () {
-							//deactivateRevealPanel();
-					});
+								});
 					//tabbed focus
 					$('#products tbody tr a').on({
 						focus: function () {
@@ -130,7 +132,8 @@ $(function() {
 					}
 				
 				
-				$('table#products').fadeIn( "slow" );
+				$('table#products').show();
+				$('table#products tbody').fadeIn( "slow" );
 				
 	}
 	
@@ -139,12 +142,16 @@ $(function() {
 		if(templateSale === false) {
 			return templatePrice.toFixed(2);
 		} else {
-			return '<del>' + templatePrice.toFixed(2) + '</del> ' + templateSale.toFixed(2);
+			return `<del>${templatePrice.toFixed(2)}</del>${templateSale.toFixed(2)}`;
+
 		}
 	}
 	
 	function activateRevealPanel(el){
+			
+			//take the hover||tabbed row element and retrieve data from child cells to populate hover element
 			deactivateRevealPanel();
+			
 			$('.products .col1').prepend('<div id="product-details"></div>');
 			
 			var image = $('td:nth-child(1)', el).html();

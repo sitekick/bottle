@@ -5,7 +5,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width">
 		
-		
 		<!-- bower:css -->
 		<link rel="stylesheet" href="../../bower_components/normalize-css/normalize.css" />
 		<!-- endbower -->
@@ -98,12 +97,13 @@
 						</div>
 						<div class="column col23">
 							<section>
-								<form action="" id="productform">
-									<select>
+								<form action="" id="productform" class="ui-form">
+									<label for="ui-select"> Choose Products:</label>
+									<select name="ui-select">
 										<option value="featured" selected>Featured Products</option>
 										<option value="sale">Sale Items</option>
 									</select>
-								
+								</form>
 								<table id="products" class="sectiontable" cellpading="0" cellspacing="0" border="0">
 									<thead>
 										<tr>
@@ -115,51 +115,23 @@
 											<th class="partprice">Unit Price</th>
 										</tr>
 									</thead>
-									<tbody><!--JSON--></tbody>
+									<tbody><!--JSON:products.json--></tbody>
 								</table>
-								</form>
 							</section>
 						</div>
 					</div><!--/.row-->
 					<div class="row software">
 						<div class="column col12 blog">
 							<section>
-								<form action="" id="softwareform">
-									<select>
-										<option selected>Blog Articles</option>
-										<option>Featured Manufacturers</option>
+								<form action="" id="softwareform" class="ui-form">
+									<label for="ui-select"> Choose Topic:</label>
+									<select name="ui-select">
+										<option value="software" selected>Blog Articles</option>
+										<option value="manufacturers">Featured Manufacturers</option>
 									</select>
 								</form>
 								<div class="scrollwrap">
-								<article>
-									<div class="logo">
-										<img src="assets/img/xerox.jpg" alt="xerox software"/>
-									</div>
-									<div class="teaser">
-										<h4>Article Title About Software</h4>
-										<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
-									</div>
-								</article>
-								<hr />
-								<article>
-									<div class="logo">
-										<img src="assets/img/dicks.jpg" alt="dicks sporting goods software" />
-									</div>
-									<div class="teaser">
-										<h4>Article Title About Software</h4>
-										<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-									</div>
-								</article>
-								<hr />
-								<article>
-									<div class="logo">
-										<img src="assets/img/viacom.jpg" alt="viacom software" />
-									</div>
-									<div class="teaser">
-										<h4>Article Title About Software</h4>
-										<p>Labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-									</div>
-								</article>
+								<!--JSON:software.json-->
 								</div><!--/.scrollwrap-->
 							</section>
 						</div>

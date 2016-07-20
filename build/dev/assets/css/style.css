@@ -45,6 +45,11 @@ header .row {
 main .row {
   padding: 2em 0;
 }
+@media screen and (max-width: 768px) {
+  main .row {
+    padding: 1em 0;
+  }
+}
 @media screen and (max-width: 500px) {
   footer .row {
     display: block;
@@ -74,7 +79,7 @@ main .row {
           align-items: center;
 }
 @media screen and (max-width: 768px) {
-  .flexbox .row.software {
+  .flexbox .row.products {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -263,7 +268,7 @@ main .row {
 }
 
 #header {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   overflow: hidden;
 }
 #header h1 {
@@ -404,12 +409,48 @@ canvas {
   display: inline-block;
 }
 
+/* software section */
+.software .col3 {
+  position: relative;
+}
+
+#blog-photo {
+  position: absolute;
+  z-index: 100;
+  background: #FFF;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.software .reveal {
+  display: none;
+}
+
+.scrollwrap article:hover,
+.scrollwrap article.focused {
+  background: #0099CC;
+  color: #FFF;
+}
+.scrollwrap article:hover a,
+.scrollwrap article.focused a {
+  color: #FFF;
+}
+.scrollwrap article:hover a:focus,
+.scrollwrap article.focused a:focus {
+  outline: none;
+}
+
 /*--------------Table----------------*/
 table {
   width: 100%;
   text-align: left;
   color: #006C8F;
   line-height: 1.25em;
+}
+table#products {
+  margin-top: 1em;
 }
 table#products tr > *:nth-child(6) {
   /*Price Column*/
@@ -592,10 +633,7 @@ input {
   font-weight: 700;
 }
 
-select {
-  font-size: 1.125em;
-}
-#main select {
+label[for="ui-select"] {
   font-family: "Cabin", sans-serif;
   font-size: 1.5em;
   font-weight: 400;
@@ -1185,14 +1223,14 @@ select {
   font-weight: 700;
 }
 
-select {
-  border: 0;
-  border-radius: 0;
-  background: #FFF;
-  margin-bottom: 1em;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+form.ui-form select, form.ui-form label {
+  vertical-align: middle;
+}
+
+label[for="ui-select"] {
   color: #0099CC;
+  display: inline-block;
+  margin-right: .5em;
 }
 
 .no-js .footer {

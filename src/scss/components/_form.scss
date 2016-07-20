@@ -92,19 +92,14 @@
 	}
 	
 
+form.ui-form{select,label{vertical-align: middle;}}
 
-
-select {
-	border: 0;
-	border-radius: 0;
-	background: $white;
-	margin-bottom: 1em;
-	box-shadow: none;
-	color: $blue;
+label {
+	
+	&[for="ui-select"]{
+		color: $blue;
+		display: inline-block;
+		margin-right: .5em;
+	}
 }
-select:focus {
-// 	outline: none;
-}
-
-
 
