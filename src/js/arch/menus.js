@@ -83,10 +83,10 @@ $(function() {
 					$("nav .level1 > li > a").removeClass('active').removeAttr('aria-pressed');
 					}	
 
-				
 				$('nav .level1 > li a').off().on({
 					focus: function(){
-						console.log('test');
+						//@a11y: show drop down on tab focus
+						fireDropDown('down', $(this).parent());
 					}
 				});
 				
@@ -102,29 +102,55 @@ $(function() {
 		   		});
 		   		
 		   		
+		   		$('nav .level2 > li:last-child a').on({
+			   		//retract dropdown when last sub menu item loses focus
+		   			focusout: function() {
+			   			fireDropDown( 'up', $(this).parents('.level1 li') );
+		   			}
+		   		});
+			   		
+		   		
 		   		$("nav .level1 > li").off().on({
-					
-					mouseenter: function() {
-							var yy = $(this).height();
-							var sy = $(".row.slider").height();
-							var yb = $(".level2", this).data("borderw");
-							$(this).addClass("active");
-							$(".level2", this).animate({
-									top: yy,
-									height : sy-yb
-			  					}, 300, "swing");
-						},
-					mouseleave: function () {
-						
-							$(this).removeClass("active");
-							$(".level2", this).animate({
-									top: $(".level2", this).data("offset"),
-									height : $(".level2", this).data("calcheight")
-			  					}, 200, "swing");
-						}
-					});
-   
+					mouseenter: function() {fireDropDown('down', this)},
+					mouseleave: function () {fireDropDown('up', this)}
+					})
+  
    }
+   
+   function fireDropDown(dir, el) {
+	   switch(dir){
+		   
+		   case 'down':
+		   		
+		   		$(el).data('fired', true);
+		   		
+		   		var yy = $(el).height();
+		   		var sy = $(".row.slider").height();
+		   		var yb = $(".level2", el).data("borderw");
+		   		$(el).addClass("active");
+		   		$(".level2", el).animate({
+					top: yy,
+					height : sy-yb
+			  	}, 300, "swing");
+		   break;
+		   case 'up':
+		   default : 
+		   //retract
+		   		
+		   		if( $(el).data('fired') ){
+			   			$(el).data('fired', false);
+			   			$(el).removeClass("active");
+			   			$(".level2", el).animate({
+			   			top: $(".level2", el).data("offset"),
+			   			height : $(".level2", el).data("calcheight")
+			  			}, 200, "swing");
+			   	} else {
+				   	return;
+			   	}
+		   		
+		}
+   };
+   
    
    function footerNavActivate() {
 	   $(".footer ul").hide();	

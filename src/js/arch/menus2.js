@@ -1,43 +1,33 @@
 /* Detect width to initialize appropriate menu behaviors */
 $(function() {
-	 
-	var currentMQ = transitionMq();
-	$(window).resize(function(){ transitionMq()});
-	
-    function transitionMq() {
-		/* As screen size changes; detect if we have transitioned between media queries; requires Modernizr */
-		let mQueries = ['(max-width: 500px)','(max-width: 768px)','(max-width: 1024px)','(min-width: 1024px)'];
-		
-		for (var i=0;i < mQueries.length; i++) {
-			
-			if(Modernizr.mq(mQueries[i]) == true){
-				
-				if(currentMQ == null){
-				 	transitionMqEvents(mQueries[i]);
-				 	return mQueries[i];
-				} else if(mQueries[i] != currentMQ){
-					currentMQ = mQueries[i];
-					transitionMqEvents(mQueries[i]);
-				} 
-				break;
-			}
-		}
-	}
+	 //Mobile Chrome (will fire resize on scroll; track width)
+	 var cachedwidth = $(window).width();
+     $(window).resize(function(){nav(cachedwidth)});
+   
+    nav($(window).width() + 1);
     
-    function transitionMqEvents(mq) {
-			
-			if(mq == '(max-width: 500px)'){
-				mobileNav();
-				footerNavActivate();	
-			} else {
+    function nav(cwidth) {
+	    	
+	    	if( $(window).width() == cwidth ){
+		   	     return ;
+		   	} 
+	    	
+	    	if (Modernizr.mq('(min-width: 500px)') ) {
 				standardNav();
 				footerNavDeactivate();	
-				}
-	}
+			} else {
+				mobileNav();
+				footerNavActivate();
+        	}
+			
+			cachedwidth = $(window).width();
+    }
     
-        
+    
+    
     function mobileNav() {
 	   	     
+	  
 	   	      //reset elements
 		        $("nav .level1 > li").off(); 
 				$("nav .level2").each( function() {
@@ -93,10 +83,10 @@ $(function() {
 					$("nav .level1 > li > a").removeClass('active').removeAttr('aria-pressed');
 					}	
 
+				
 				$('nav .level1 > li a').off().on({
 					focus: function(){
-						//@a11y: show drop down on tab focus
-						fireDropDown('down', $(this).parent());
+						console.log('test');
 					}
 				});
 				
@@ -112,55 +102,29 @@ $(function() {
 		   		});
 		   		
 		   		
-		   		$('nav .level2 > li:last-child a').on({
-			   		//retract dropdown when last sub menu item loses focus
-		   			focusout: function() {
-			   			fireDropDown( 'up', $(this).parents('.level1 li') );
-		   			}
-		   		});
-			   		
-		   		
 		   		$("nav .level1 > li").off().on({
-					mouseenter: function() {fireDropDown('down', this)},
-					mouseleave: function () {fireDropDown('up', this)}
-					})
-  
+					
+					mouseenter: function() {
+							var yy = $(this).height();
+							var sy = $(".row.slider").height();
+							var yb = $(".level2", this).data("borderw");
+							$(this).addClass("active");
+							$(".level2", this).animate({
+									top: yy,
+									height : sy-yb
+			  					}, 300, "swing");
+						},
+					mouseleave: function () {
+						
+							$(this).removeClass("active");
+							$(".level2", this).animate({
+									top: $(".level2", this).data("offset"),
+									height : $(".level2", this).data("calcheight")
+			  					}, 200, "swing");
+						}
+					});
+   
    }
-   
-   function fireDropDown(dir, el) {
-	   switch(dir){
-		   
-		   case 'down':
-		   		
-		   		$(el).data('fired', true);
-		   		
-		   		var yy = $(el).height();
-		   		var sy = $(".row.slider").height();
-		   		var yb = $(".level2", el).data("borderw");
-		   		$(el).addClass("active");
-		   		$(".level2", el).animate({
-					top: yy,
-					height : sy-yb
-			  	}, 300, "swing");
-		   break;
-		   case 'up':
-		   default : 
-		   //retract
-		   		
-		   		if( $(el).data('fired') ){
-			   			$(el).data('fired', false);
-			   			$(el).removeClass("active");
-			   			$(".level2", el).animate({
-			   			top: $(".level2", el).data("offset"),
-			   			height : $(".level2", el).data("calcheight")
-			  			}, 200, "swing");
-			   	} else {
-				   	return;
-			   	}
-		   		
-		}
-   };
-   
    
    function footerNavActivate() {
 	   $(".footer ul").hide();	

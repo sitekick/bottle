@@ -428,6 +428,12 @@ canvas {
   display: none;
 }
 
+.scrollwrap article {
+  padding: .25em;
+}
+.scrollwrap a p {
+  color: #000;
+}
 .scrollwrap article:hover,
 .scrollwrap article.focused {
   background: #0099CC;
@@ -440,6 +446,17 @@ canvas {
 .scrollwrap article:hover a:focus,
 .scrollwrap article.focused a:focus {
   outline: none;
+}
+.scrollwrap article:hover a p,
+.scrollwrap article.focused a p {
+  color: #FFF;
+}
+.scrollwrap article:hover hr,
+.scrollwrap article.focused hr {
+  visibility: hidden;
+}
+.scrollwrap img {
+  margin: .5em 1em;
 }
 
 /*--------------Table----------------*/

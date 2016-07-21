@@ -162,6 +162,17 @@ canvas{
 
 .scrollwrap {
 	
+	article {
+		padding: .25em;
+	}
+	
+	a {
+		
+		p {
+			color: $black;
+		}
+	}
+	
 	article:hover,
 	article.focused{
 		
@@ -174,8 +185,19 @@ canvas{
 			&:focus {
 				outline: none;
 			}
-			
+				p {
+					color: $white;
+				}
 			}
+	
+			hr {
+				visibility: hidden;
+			}
+			
+	}
+	
+	img {
+		margin: .5em 1em;
 	}
 } 
 

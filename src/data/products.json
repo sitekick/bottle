@@ -1,6 +1,5 @@
 {
-	"products": {
-		"product": [{
+	"products": [{
 			"number": "5413879-1",
 			"category": "Connector RF",
 			"price": 3.04,
@@ -226,5 +225,4 @@
 			"featured": true,
 			"sale": false
 		}]
-	}
 }

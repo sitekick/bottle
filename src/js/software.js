@@ -30,7 +30,7 @@ $(function() {
 		/* As screen size changes; detect if we have transitioned between media queries; requires Modernizr */
 		let mQueries = ['(max-width: 500px)','(max-width: 768px)','(max-width: 1024px)','(min-width: 1024px)'];
 		
-		for (i=0 ;i < mQueries.length; i++) {
+		for (var i=0 ;i < mQueries.length; i++) {
 			
 			if(Modernizr.mq(mQueries[i]) == true){
 				
@@ -59,12 +59,13 @@ $(function() {
 				
 				$.each(arr, function (index, value) {
 				
-					let article = `<article>
-					<div class="logo"><img src="assets/img/blog/logos/${value.image1}" alt="" /></div>
-					<div class="teaser"><h4><a href="${value.link}">${value.title}</a></h4><p>${value.teaser}</p></div>
-					<div class="reveal"><img class="autosize" src="assets/img/blog/photos/src/${value.image2}" alt="" /></div>
-					<hr /></article>`;
-						
+					let article = `<article><a href="${value.link}">
+					<div class="logo"><img class="autosize" src="assets/img/blog/logos/${value.image1}" alt="" /></div>
+					<div class="teaser"><h4>${value.title}</h4><p>${value.teaser}</p></div>
+					</a>
+					${revealImage(value.image2)}
+					<hr></article>`;
+					
 					articles.push(article);	
 				});
 				
@@ -107,22 +108,29 @@ $(function() {
 					$('article', target).off( "mouseenter mouseleave" );
 					}
 				
-				
-				//$('table#products').show();
 				$(target).fadeIn( "slow" );
 				
 	}
 	
-	
+	function revealImage(fileName){
+		if(fileName == null) {
+			return '';
+		} else {
+			return `<div class="reveal"><img src="assets/img/blog/photos/src/${fileName}" class="autosize" alt=""></div>`
+		}
+	}
 	
 	function activateRevealPanel(el){
 			
 			//take the hover||tabbed row element and retrieve data from child cells to populate hover element
 			deactivateRevealPanel();
+			let image = $('div.reveal', el).html();
+			
+			if(image == null){
+				return;
+			}
 			
 			$('.software .col3').prepend('<div id="blog-photo"></div>');
-			
-			let image = $('div.reveal', el).html();
 			
 			let photo = `<div class="blog-photo">${image}</div>`;
 			
