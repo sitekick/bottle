@@ -1,41 +1,30 @@
 /* Detect width to initialize appropriate menu behaviors */
 $(function() {
 	 
-	var currentMQ = transitionMq();
-	$(window).resize(function(){ transitionMq()});
-	
-    function transitionMq() {
-		/* As screen size changes; detect if we have transitioned between media queries; requires Modernizr */
-		let mQueries = ['(max-width: 500px)','(max-width: 768px)','(max-width: 1024px)','(min-width: 1024px)'];
-		
-		for (var i=0;i < mQueries.length; i++) {
-			
-			if(Modernizr.mq(mQueries[i]) == true){
-				
-				if(currentMQ == null){
-				 	transitionMqEvents(mQueries[i]);
-				 	return mQueries[i];
-				} else if(mQueries[i] != currentMQ){
-					currentMQ = mQueries[i];
-					transitionMqEvents(mQueries[i]);
-				} 
-				break;
+		var events = {
+			'(max-width: 500px)' : function() { 
+				 mobileNav();
+				 footerNavActivate();
+			},
+			'(max-width: 768px)' : function() { 
+				 standardNav();
+				 footerNavDeactivate();
+			},
+			'(max-width: 1024px)' : function() { 
+				 standardNav();
+				 footerNavDeactivate();
+			},
+			'(min-width: 1024px)' : function() { 
+				 standardNav();
+				 footerNavDeactivate();
 			}
-		}
-	}
-    
-    function transitionMqEvents(mq) {
-			
-			if(mq == '(max-width: 500px)'){
-				mobileNav();
-				footerNavActivate();	
-			} else {
-				standardNav();
-				footerNavDeactivate();	
-				}
-	}
-    
-        
+		};
+		
+		//with true to set initial state
+		resizeQuery(events, true);
+	
+   
+         
     function mobileNav() {
 	   	     
 	   	      //reset elements

@@ -1,27 +1,11 @@
 $(function() {
 	
-	'use strict';	
-		
 		var target = '.software .scrollwrap';
 		//detect when a screen resize occurs that results in new media query being utilized;
 		//refires products table build mechanism to switch between layout modes;
+		var currentMQ = transitionMq();
+		$(window).resize(function(){ transitionMq() });
 		
-		var events = {
-			'(max-width: 500px)' : function() { 
-				 $("#softwareform select").change();
-			},
-			'(max-width: 768px)' : function() { 
-				 $("#softwareform select").change();
-			},
-			'(max-width: 1024px)' : function() { 
-				 $("#softwareform select").change();
-			},
-			'(min-width: 1024px)' : function() { 
-				 $("#softwareform select").change();
-			}
-		};
-		
-		resizeQuery(events);
 		
 		
 		$.getJSON('assets/data/software.json', function(data) {
@@ -41,7 +25,32 @@ $(function() {
 				}).change();
 		});
 		
-
+	
+	function transitionMq() {
+		/* As screen size changes; detect if we have transitioned between media queries; requires Modernizr */
+		let mQueries = ['(max-width: 500px)','(max-width: 768px)','(max-width: 1024px)','(min-width: 1024px)'];
+		
+		for (var i=0 ;i < mQueries.length; i++) {
+			
+			if(Modernizr.mq(mQueries[i]) == true){
+				
+				if(currentMQ == null){
+				 	return mQueries[i];
+				} else if(mQueries[i] != currentMQ){
+					currentMQ = mQueries[i];
+					transitionMqEvents();
+				} 
+				
+				break;
+			}
+		}
+	}
+	
+	function transitionMqEvents() {
+			//rebuild products table to allow switch between two modes; done by firing change on select input
+			$("#softwareform select").change();
+		}
+	
 	function buildScroll(arr) {
 	
 				var articles = [];

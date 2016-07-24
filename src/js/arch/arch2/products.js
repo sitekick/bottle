@@ -1,35 +1,20 @@
 $(function() {
 	
-	'use strict';
-	
 		var target = 'table#products';
-		$(target).hide();
+		
 		//detect when a screen resize occurs that results in new media query being utilized;
 		//refires products table build mechanism to switch between layout modes;
+		var currentMQ = transitionMq();
 		
-		var events = {
-			'(max-width: 500px)' : function() { 
-				 $("#productform select").change();
-			},
-			'(max-width: 768px)' : function() { 
-				 $("#productform select").change();
-			},
-			'(max-width: 1024px)' : function() { 
-				 $("#productform select").change();
-			},
-			'(min-width: 1024px)' : function() { 
-				 $("#productform select").change();
-			}
-		};
+		$(window).resize(function(){ transitionMq() });
 		
-		resizeQuery(events);
-	
+		$(target).hide();
 		
 		$.getJSON('assets/data/products.json', function(data) {
 				
 				//the select field change event fires the build mechanism for the table
 				$("#productform select").change(function() {
-				
+			
 				var sel = '';
 			
 				sel += $("#productform select option:selected").val(); 
@@ -40,7 +25,33 @@ $(function() {
 
 				}).change();
 		});
+	
+	
+	function transitionMq() {
+		/* As screen size changes; detect if we have transitioned between media queries; requires Modernizr */
+		let mQueries = ['(max-width: 500px)','(max-width: 768px)','(max-width: 1024px)','(min-width: 1024px)'];
 		
+		for (var i=0 ;i < mQueries.length; i++) {
+			
+			if(Modernizr.mq(mQueries[i]) == true){
+				
+				if(currentMQ == null){
+				 	return mQueries[i];
+				} else if(mQueries[i] != currentMQ){
+					currentMQ = mQueries[i];
+					transitionMqEvents();
+				} 
+				
+				break;
+			}
+		}
+	}
+
+	
+	function transitionMqEvents() {
+			//rebuild products table to allow switch between two modes; done by firing change on select input
+			$("#productform select").change();
+		}
 	
 	function buildTable(products, display) {
 	

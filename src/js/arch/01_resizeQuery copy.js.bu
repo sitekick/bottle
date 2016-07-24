@@ -1,0 +1,67 @@
+var resizeQuery = (function (eventsobj, src) {
+	//'use strict';	
+		var mQueries = ['(max-width: 500px)','(max-width: 768px)','(max-width: 1024px)','(min-width: 1024px)'];
+		//var currentMQ = idQuery();
+		//var newMQ;
+		
+		var qChange = function (MQ, src) {
+			
+			var tmpMQ = MQ.current;
+			
+			$(window).resize(function(){
+				MQ.resized = idQuery();
+				//console.log(MQ);
+				
+				if(MQ.resized != tmpMQ){
+					returner(src);
+					tmpMQ = MQ.resized;
+				};
+				
+			});
+			
+		}
+		
+		function idQuery() {
+			for (var i=0 ;i < mQueries.length; i++) {
+				if(Modernizr.mq(mQueries[i]) == true){
+					
+					return mQueries[i];
+				
+				break;
+				}
+			}
+		}
+		
+		function returner(str) {
+			//console.log(str);
+			console.log( 'fire:' + str );
+			//currentMQ = idQuery();
+		}
+		
+
+
+		//return monitorMQ;
+
+		return {
+			
+			MQ : function() {
+				
+				return { 
+					resized : null, 
+					current : idQuery()
+					} ;
+			},
+			
+			newMQ : function() {
+				return idQuery();
+			},			
+			
+			monitorMQ : qChange
+			
+		} 
+		
+		
+		
+		
+	
+})();
