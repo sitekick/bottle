@@ -4,6 +4,9 @@
 	width: 100%;
 	display: table;
 
+	@include screen-medium {
+		display: block;
+	}
 
 /* Classes */
 @import 'row/classes';

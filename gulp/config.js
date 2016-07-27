@@ -16,6 +16,10 @@ module.exports = {
 		src:  src + 'js/*.js',
 		dest: src + 'js/dist'
 	},
+	coding : {
+		src:  [src + 'js/vendor/*.js', src + 'js/*.js'],
+		dest: dist + dev + 'assets/js'
+	},
 	images: {
 		src:  [src  + 'img/*',src + 'img/**/*','!' + src + 'img/arch','!' + src + 'img/arch/**/*'],
 		dest: dist + dev + 'assets/img'
@@ -41,7 +45,6 @@ module.exports = {
 		browsers: [
 		'last 2 versions',
 		'safari 5',
-		'ie 8',
 		'ie 9',
 		'opera 12.1',
 		'ios 6',

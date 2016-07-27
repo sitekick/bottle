@@ -66,6 +66,9 @@
 			background-color: $black;
 			background-size: 64px 160px;
 		
+			@include ie(10 9){
+				background-image: url(../img/icons/64x64.png);
+			}
 		
 		//$socialNets @utils/variables
 		@each $s in $socialNets {

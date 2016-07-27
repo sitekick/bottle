@@ -142,6 +142,32 @@ $(function () {
 		});
 	}
 });
+"use strict";
+
+$(function () {
+	//detects versions 9,10,11
+	(function ieVersion() {
+
+		var ua = window.navigator.userAgent;
+
+		switch (true) {
+
+			case ua.indexOf("Trident/7.0") > 0:
+				addIeClass(11);
+				break;
+			case ua.indexOf("Trident/6.0") > 0:
+				addIeClass(10);
+				break;
+			case ua.indexOf("Trident/5.0") > 0:
+				addIeClass(9);
+				break;
+		}
+
+		function addIeClass(v) {
+			$('html').addClass("ie" + v);
+		}
+	})();
+});
 'use strict';
 
 $(function () {
@@ -500,7 +526,7 @@ $(function () {
 
 		$.each(arr, function (index, value) {
 
-			var article = '<article><a href="' + value.link + '">\n\t\t\t\t\t<div class="logo"><img class="autosize" src="assets/img/blog/logos/' + value.image1 + '" alt="" /></div>\n\t\t\t\t\t<div class="teaser"><h4>' + value.title + '</h4><p>' + value.teaser + '</p></div>\n\t\t\t\t\t</a>\n\t\t\t\t\t' + revealImage(value.image2) + '\n\t\t\t\t\t<hr></article>';
+			var article = '<article><a href="' + value.link + '">\n\t\t\t\t\t<div class="image"><img class="autosize" src="assets/img/blog/logos/' + value.image1 + '" alt="" /></div>\n\t\t\t\t\t<div class="teaser"><h4>' + value.title + '</h4><p>' + value.teaser + '</p></div>\n\t\t\t\t\t</a>\n\t\t\t\t\t' + revealImage(value.image2) + '\n\t\t\t\t\t<hr></article>';
 
 			articles.push(article);
 		});

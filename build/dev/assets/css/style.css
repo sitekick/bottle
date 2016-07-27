@@ -20,6 +20,11 @@ p, ul, ol {
   /* Classes */
   /* Parents */
 }
+@media screen and (max-width: 768px) {
+  .row {
+    display: block;
+  }
+}
 .row.brand {
   z-index: 3;
 }
@@ -29,6 +34,7 @@ p, ul, ol {
 .row.slider {
   z-index: 1;
   background: #000;
+  table-layout: fixed;
 }
 header .row {
   position: relative;
@@ -116,7 +122,7 @@ main .row {
   /* Classes */
 }
 .slider .column {
-  vertical-align: middle;
+  vertical-align: top;
 }
 @media screen and (max-width: 768px) {
   .main .column {
@@ -142,20 +148,20 @@ main .row {
     width: 100%;
   }
 }
-.column.blog .logo {
+.column.blog .image {
   width: 33%;
   text-align: center;
 }
 .column.blog .teaser {
   width: 66%;
 }
-.column.blog .logo,
+.column.blog .image,
 .column.blog .teaser {
   vertical-align: middle;
   display: inline-block;
 }
 @media screen and (max-width: 500px) {
-  .column.blog .logo,
+  .column.blog .image,
   .column.blog .teaser {
     display: block;
     width: 100%;
@@ -184,6 +190,12 @@ main .row {
 .col12 {
   width: 68.2377%;
 }
+@media screen and (max-width: 768px) {
+  html.ie11 .slider .col12 {
+    height: 0;
+    padding-bottom: 54.51713%;
+  }
+}
 
 .col23 {
   width: 65.77869%;
@@ -196,11 +208,12 @@ main .row {
 }
 .slider .col3 {
   color: #FFF;
-  padding-bottom: 10px;
+  vertical-align: middle;
 }
 @media screen and (max-width: 768px) {
   .slider .col3 {
     text-align: center;
+    padding-bottom: 10px;
   }
 }
 
@@ -455,7 +468,7 @@ canvas {
   visibility: hidden;
 }
 .scrollwrap img {
-  margin: .5em 1em;
+  max-width: 150px;
 }
 
 /*--------------Table----------------*/
@@ -631,8 +644,15 @@ nav .level1 {
 }
 nav .level2 {
   font-family: 'Lato', sans-serif;
-  font-size: 1.15rem;
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
+}
+@media screen and (max-width: 500px) {
+  nav .level2 {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
 }
 
 th {
@@ -726,6 +746,12 @@ label[for="ui-select"] {
   background-position: 0 0;
   background-color: #000;
   background-size: 64px 160px;
+}
+html.ie10 .social .menu li a {
+  background-image: url(../img/icons/64x64.png);
+}
+html.ie9 .social .menu li a {
+  background-image: url(../img/icons/64x64.png);
 }
 .social .menu li a.google {
   background-position: 0 0;
@@ -853,8 +879,14 @@ label[for="ui-select"] {
     text-align: center;
     position: relative;
   }
+  nav .level1 > li:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   nav .level1 > li > a {
-    display: inline-block;
+    display: block;
+    float: left;
     background: #FFF;
     padding: 1em 0;
     width: 100%;
@@ -942,7 +974,7 @@ label[for="ui-select"] {
     height: 32px;
     padding: 0;
     background-color: #000;
-    background-image: url("../img/icons/64x64.svg");
+    background-image: url(../img/icons/64x64.svg);
     background-repeat: no-repeat;
     background-position: 0 -128px;
     background-size: 64px 160px;
@@ -953,6 +985,12 @@ label[for="ui-select"] {
     z-index: 10;
     border: 0;
     /* Classes */
+  }
+  html.ie10 .menu-toggle {
+    background-image: url(../img/icons/64x64.png);
+  }
+  html.ie9 .menu-toggle {
+    background-image: url(../img/icons/64x64.png);
   }
   .menu-toggle.active {
     background-color: #0099CC;

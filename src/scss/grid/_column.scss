@@ -27,7 +27,18 @@
 
 .col12 {
 	width: 68.2377%;
+	
+	.slider & {
+	
+		@include screen-medium{
+			//@ie11 flexbox issue
+			@include ie(11){
+				height: 0;
+				padding-bottom: percentage(350/642);
+			}
+		}
 	}
+}
 	
 .col23 {
 	width: 65.77869%;
@@ -40,10 +51,11 @@
 		
 		.slider & {
 			color: $white;
-			padding-bottom: 10px;
+			vertical-align: middle;
 			
 			@include screen-medium{
 				text-align: center;
+				padding-bottom: 10px;
 			}
 		}
 		

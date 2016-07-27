@@ -38,7 +38,7 @@ $(function () {
 
 		$.each(arr, function (index, value) {
 
-			var article = '<article><a href="' + value.link + '">\n\t\t\t\t\t<div class="logo"><img class="autosize" src="assets/img/blog/logos/' + value.image1 + '" alt="" /></div>\n\t\t\t\t\t<div class="teaser"><h4>' + value.title + '</h4><p>' + value.teaser + '</p></div>\n\t\t\t\t\t</a>\n\t\t\t\t\t' + revealImage(value.image2) + '\n\t\t\t\t\t<hr></article>';
+			var article = '<article><a href="' + value.link + '">\n\t\t\t\t\t<div class="image"><img class="autosize" src="assets/img/blog/logos/' + value.image1 + '" alt="" /></div>\n\t\t\t\t\t<div class="teaser"><h4>' + value.title + '</h4><p>' + value.teaser + '</p></div>\n\t\t\t\t\t</a>\n\t\t\t\t\t' + revealImage(value.image2) + '\n\t\t\t\t\t<hr></article>';
 
 			articles.push(article);
 		});

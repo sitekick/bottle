@@ -7,9 +7,11 @@
 	&.brand {
 		align-items: flex-end;
 	}
+	
 	&.slider {
 		align-items: center;
 	}
+	
 	&.products {
 		
 		@include screen-medium{

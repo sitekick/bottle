@@ -6,15 +6,18 @@
 			display: table;
 			width: 100%;
 			vertical-align: top;
-			
+
 			> li {
+			
+			@include clearfix;
 			display: table-cell;
 			width: 33.35%;	
 			text-align: center;
 			position: relative;
-			
+
 				> a {
-					display: inline-block;
+					display: block;
+					float: left;
 					background: $white;
 					padding: 1em 0;
 					width: 100%;
@@ -132,7 +135,7 @@
 		height: 32px;
 		padding: 0;
 		background-color: $black;
-		background-image: url('../img/icons/64x64.svg');
+		background-image: url(../img/icons/64x64.svg);
 		background-repeat: no-repeat;
 		background-position: 0 -128px;
 		background-size: 64px 160px;
@@ -142,6 +145,10 @@
 		top: 6px;
 		z-index: 10;
 		border: 0;	
+	
+		@include ie(10 9){
+				background-image: url(../img/icons/64x64.png);
+			}
 	
 	/* Classes */
 	&.active {

@@ -39,7 +39,7 @@ $(function() {
 				$.each(arr, function (index, value) {
 				
 					let article = `<article><a href="${value.link}">
-					<div class="logo"><img class="autosize" src="assets/img/blog/logos/${value.image1}" alt="" /></div>
+					<div class="image"><img class="autosize" src="assets/img/blog/logos/${value.image1}" alt="" /></div>
 					<div class="teaser"><h4>${value.title}</h4><p>${value.teaser}</p></div>
 					</a>
 					${revealImage(value.image2)}

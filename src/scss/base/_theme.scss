@@ -23,10 +23,13 @@ a {
 
 /*=============IMAGE=============*/
 
+
+
 .autosize {
 	max-width: 100%;
 	height: auto;
 	display: inline-block;
+
 }
 
 .logo img {
@@ -197,8 +200,9 @@ canvas{
 	}
 	
 	img {
-		margin: .5em 1em;
+		max-width: 150px;
 	}
+	
 } 
 
  
