@@ -1,28 +1,16 @@
 $(function() {
-	
-	'use strict';	
 		
 		var target = '.software .scrollwrap';
 		//detect when a screen resize occurs that results in new media query being utilized;
 		//refires products table build mechanism to switch between layout modes;
 		
 		var events = {
-			'(max-width: 500px)' : function() { 
-				 $("#softwareform select").change();
-			},
-			'(max-width: 768px)' : function() { 
-				 $("#softwareform select").change();
-			},
-			'(max-width: 1024px)' : function() { 
-				 $("#softwareform select").change();
-			},
-			'(min-width: 1024px)' : function() { 
-				 $("#softwareform select").change();
+			'(all)' : function  (){
+				$("#softwareform select").change();
 			}
 		};
 		
 		resizeQuery(events);
-		
 		
 		$.getJSON('assets/data/software.json', function(data) {
 								

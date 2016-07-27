@@ -1,8 +1,10 @@
 var gulp 	= require('gulp'),
-	config 	= require('../../config').watch;
+	config 	= require('../../config');
 
 gulp.task('watch', function() {
-	gulp.watch(config.scripts, ['scripts']);
-	gulp.watch(config.sass, ['sass']);
-	gulp.watch(config.images, ['images']);
+	gulp.watch(config.scripts.src, ['scripts']);
+	gulp.watch(config.sass.src, ['sass']);
+	gulp.watch(config.images.src, ['images']);
+	gulp.watch(config.babel.src, ['transpile']);
+	gulp.watch(config.data.src, ['data']);
 });

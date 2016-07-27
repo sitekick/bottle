@@ -1,16 +1,20 @@
 var gulp 			= require('gulp'),
 	runSequence		= require('run-sequence'),
 	config 			= require('../../config');
-
+	
 
 /**
  * Run all tasks needed for a build in defined order
  */
+
 gulp.task('build', function() {
   runSequence(
   	'delete',
-//   	['data','images','scripts','sass'],
+  	['data','images','transpile'],
   	['scripts','sass'],
-  	'watch'
+  	'watch',
+  	'serve'
   	);
   });
+  
+ //gulp.task('build', ['data','images','transpile','scripts','sass','watch','serve']);

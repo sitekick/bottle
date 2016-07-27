@@ -9,28 +9,23 @@ module.exports = {
 		src: [dist + dev + 'assets/css', dist + dev + 'assets/js']
 	},
 	scripts: {
-		//src:  srcAssets + '/scripts/**/*.{js,json}',
-		//src:  src + 'js/*.{js,json}',
-		//exclude: [],
-		src:  [src + 'js/**/*.js','!' + src + 'js/arch/**/*'],
+		src:  [src + 'js/vendor/*.js', src + 'js/dist/*.js'],
 		dest: dist + dev + 'assets/js'
 	},
+	babel : {
+		src:  src + 'js/*.js',
+		dest: src + 'js/dist'
+	},
 	images: {
-		//src:  srcAssets + '/img/**/*',
-		
 		src:  [src  + 'img/*',src + 'img/**/*','!' + src + 'img/arch','!' + src + 'img/arch/**/*'],
 		dest: dist + dev + 'assets/img'
 	},
 	data: {
-		//src:  srcAssets + '/img/**/*',
-		src:  src  + 'data/*.{csv,json}',
+		src:  src  + 'data/*.json',
 		dest: dist + dev + 'assets/data'
 	},
 	sass: {
-		//src:  srcAssets + '/sass/**/*.{sass,scss}',
 		src:  src + 'scss/**/*.scss',
-	
-		//src:  src + 'scss/style.scss',
 		dest: dist + dev + 'assets/css',
 		options: {
 			noCache: true,
@@ -57,10 +52,5 @@ module.exports = {
 	bower:{
 		src: dist + dev,
 		index: 'index.html'
-	},
-	watch: {
-		sass:    src + 'scss/**/*.scss',
-		scripts: src + 'js/*.{js,json}',
-		images:  src + 'img/**/*'
 	}
 };

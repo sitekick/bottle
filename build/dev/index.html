@@ -10,6 +10,14 @@
 		<!-- inject:css -->
 		<link rel="stylesheet" href="assets/css/style.css">
 		<!-- endinject -->
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="assets/img/favicons/manifest.json">
+		<link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+		<meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
 		<div id="container" class="">
@@ -28,7 +36,10 @@
 						</div>
 						<div class="column col23 form">
 							<form id="searchform" action="" >
-								<div class="border"><input type="text" placeholder="Search" /><input type="submit" value="Search" /></div>
+								<div class="border">
+									<input type="text" placeholder="Search" />
+									<input type="submit" value="Search" />
+								</div>
 							</form>
 						</div>
 					</div><!--/.row-->
@@ -68,7 +79,7 @@
 					</div><!--/.row-->
 					<div class="row slider">
 							<div class="column col12">
-								<img src="assets/img/slider1.jpg" alt="300 locations" class="autosize" />
+								<img src="assets/img/servers.jpg" data-rjs="assets/img/servers@1.5x.jpg" alt="300 locations" class="autosize" />
 							</div>
 							<div class="column col3">
 								<h1>300+ locations and 8 major distribution centers.</h1>
@@ -141,6 +152,7 @@
 											<li><a href="#">Symposiums</a></li>
 										</ul>
 									</section>
+								</div>
 							</div>
 						</div>
 					</div><!--/.row-->
@@ -252,6 +264,7 @@
 	<script src="../../bower_components/jquery/dist/jquery.js"></script>
 	<script src="../../bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js"></script>
 	<script src="../../bower_components/Chart.js/dist/Chart.js"></script>
+	<script src="../../bower_components/retinajs/dist/retina.min.js"></script>
 	<!-- endbower -->
 	<!-- inject:js -->
 	<script src="assets/js/scripts.js"></script>

@@ -4,6 +4,7 @@ var gulp 			= require('gulp'),
 	gulpFilter  	= require('gulp-filter'),
 	sourcemaps  	= require('gulp-sourcemaps'),
 	autoprefixer	= require('gulp-autoprefixer'),
+	cache = require('gulp-cached'),
 	config 			= require('../../config');
 
 
@@ -16,6 +17,7 @@ gulp.task('sass', function() {
   
   
   return sass(config.sass.src, sassConfig)
+  	.pipe(cache('sass'))
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(autoprefixer(config.autoprefixer))

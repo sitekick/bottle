@@ -22,7 +22,6 @@ p, ul, ol {
 }
 .row.brand {
   z-index: 3;
-  padding-bottom: 1em;
 }
 .row.nav {
   z-index: 2;
@@ -172,14 +171,14 @@ main .row {
 .col1, .col2, .col12 {
   padding-right: 2.45901%;
 }
+@media screen and (max-width: 500px) {
+  .col1, .col2, .col12 {
+    padding-right: 0;
+  }
+}
 
 .col1, .col2 {
   width: 34.11885%;
-}
-@media screen and (max-width: 500px) {
-  .footer .col1, .footer .col2 {
-    padding-right: 0;
-  }
 }
 
 .col12 {
@@ -652,8 +651,8 @@ input {
 
 label[for="ui-select"] {
   font-family: "Cabin", sans-serif;
-  font-size: 1.5em;
-  font-weight: 400;
+  font-size: 1.25em;
+  font-weight: 300;
 }
 
 ::-webkit-input-placeholder {
@@ -801,12 +800,6 @@ label[for="ui-select"] {
 .footer .menu li a:hover {
   text-decoration: underline;
 }
-.menu.horizontal li {
-  /*
-  			@todo is this necesary?
-  			display: inline-block;
-  */
-}
 
 .no-js .products .col23,
 .no-js .software .col12 {
@@ -856,12 +849,9 @@ label[for="ui-select"] {
   }
   nav .level1 > li {
     display: table-cell;
-    width: 34.1700819672%;
+    width: 33.35%;
     text-align: center;
     position: relative;
-  }
-  nav .level1 > li:first-child {
-    width: 31.6598360656%;
   }
   nav .level1 > li > a {
     display: inline-block;
@@ -872,7 +862,10 @@ label[for="ui-select"] {
     color: #000;
   }
   nav .level1 > li > a:hover, li.active nav .level1 > li > a {
-    color: #09C;
+    color: #0099CC;
+  }
+  nav .level1 > li:first-child {
+    width: 33.3%;
   }
   .no-js nav .level1 > li:hover .level2 {
     left: 0;
@@ -884,8 +877,8 @@ label[for="ui-select"] {
     background: #006C8F;
     width: 100%;
     height: auto;
-    border-bottom-width: 1em;
-    border-bottom-color: #09C;
+    border-bottom-width: .75em;
+    border-bottom-color: #0099CC;
     border-bottom-style: solid;
     opacity: 0;
     line-height: 1.25;
@@ -945,24 +938,24 @@ label[for="ui-select"] {
   }
 
   .menu-toggle {
-    width: 25px;
-    height: 25px;
-    background-image: url("../img/menu-toggle.gif");
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background-color: #000;
+    background-image: url("../img/icons/64x64.svg");
     background-repeat: no-repeat;
-    background-position: 0 -25px;
+    background-position: 0 -128px;
+    background-size: 64px 160px;
     position: absolute;
     cursor: pointer;
-    right: 3px;
-    top: 3px;
+    right: 6px;
+    top: 6px;
     z-index: 10;
     border: 0;
     /* Classes */
   }
   .menu-toggle.active {
-    background-position: 0 0;
-  }
-  .menu-toggle:focus {
-    outline: 0;
+    background-color: #0099CC;
   }
 
   nav .level1 {
@@ -982,9 +975,10 @@ label[for="ui-select"] {
     padding: .75em 0;
     color: #FFF;
     text-align: center;
+    border-bottom: 1px solid #AAA;
   }
   nav .level1 > li > a:hover, nav .level1 > li > a.active {
-    background: #09C;
+    background: #0099CC;
   }
   nav .level2 {
     position: relative;
@@ -1153,56 +1147,51 @@ label[for="ui-select"] {
 
 #searchform {
   display: inline-block;
-  margin-bottom: .5em;
+  margin-bottom: 1em;
   width: 100%;
 }
 #searchform .border {
   background: #FFF;
-  display: inline-block;
+  display: block;
   border: 4px solid #BBB;
   width: 98%;
+  width: -webkit-calc(100% - 8px);
+  width: calc(100% - 8px);
   overflow: hidden;
-  white-space: nowrap;
 }
 #searchform .border.active {
   border: 4px solid #0099CC;
 }
-@media screen and (max-width: 768px) {
-  #searchform .border {
-    width: 90%;
-  }
-}
-@media screen and (max-width: 500px) {
-  #searchform .border {
-    width: 98%;
-  }
-}
 #searchform input {
-  display: inline-block;
-}
-#searchform input:focus {
-  outline: none;
-}
-#searchform input[type=text] {
-  width: 75%;
-  border: 0;
+  display: block;
+  border: 1px solid #FFF;
   -webkit-box-shadow: none;
           box-shadow: none;
-  text-indent: 5px;
+}
+#searchform input[type=text] {
+  float: left;
+  width: 70%;
+  padding: .25em 0 .25em .25em;
+}
+@media screen and (max-width: 500px) {
+  #searchform input[type=text] {
+    width: 60%;
+  }
 }
 #searchform input[type=submit] {
   border-radius: 0;
+  float: right;
   background: #BBB;
   color: #FFF;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: 0;
   margin: 0 0;
   padding: .25em 1em;
-  width: 25%;
+  cursor: pointer;
 }
 #searchform input[type=submit].active {
   background: #0099CC;
+}
+#searchform input:focus {
+  outline: none;
 }
 @media screen and (max-width: 500px) {
   #searchform {
@@ -1216,7 +1205,7 @@ label[for="ui-select"] {
   overflow: hidden;
   border: 4px solid #0099CC;
   border-top: 0;
-  margin-top: 4px;
+  margin-top: 0;
   margin-left: -4px;
   font-weight: 300;
   padding-bottom: 10px;
@@ -1234,6 +1223,7 @@ label[for="ui-select"] {
 
 .autocomplete-selected {
   background: #D9F0F7;
+  cursor: pointer;
 }
 
 .autocomplete-suggestions strong {
@@ -1245,7 +1235,7 @@ form.ui-form select, form.ui-form label {
 }
 
 label[for="ui-select"] {
-  color: #0099CC;
+  color: #000;
   display: inline-block;
   margin-right: .5em;
 }
@@ -1263,6 +1253,7 @@ label[for="ui-select"] {
     display: block;
     margin: 0;
     background: #BBB;
+    border-bottom: 1px solid #AAA;
     padding: .75em 0;
     color: #FFF;
     cursor: pointer;
@@ -1275,13 +1266,21 @@ label[for="ui-select"] {
 }
 @media screen and (max-width: 500px) {
   .js .footer .menu {
-    text-align: left;
+    text-align: center;
   }
 }
 @media screen and (max-width: 500px) {
   .js .footer .menu li {
-    display: list-item;
-    margin-bottom: .5em;
+    display: inline-block;
+    border-radius: 5px;
+    background: #D9F0F7;
+    margin: .5em .5em .5em 0;
+    padding: .5em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .js .footer .menu li a {
+    color: #0099CC;
   }
 }
 

@@ -2,7 +2,7 @@
 	"products": [{
 			"number": "5413879-1",
 			"category": "Connector RF",
-			"price": 3.04,
+			"price": 2.05,
 			"image": "5413879-1.jpg",
 			"manufacturer": "TE Connectivity Ltd",
 			"description": "Conn BNC RCP 0Hz to 4GHz 50Ohm Solder RA Thru-Hole Gold Tube",
@@ -11,12 +11,12 @@
 		}, {
 			"number": "A000008",
 			"category": "Embedded System Development Boards and Kits",
-			"price": 74.5,
+			"price": 75.5,
 			"image": "a000008.jpg",
 			"manufacturer": "Arduino Corporation",
 			"description": "ATmega32u4 Microcontroller Development Board 16MHz CPU 64.0024MB RAM 1KB/32KB/32MB EEPROM/Flash",
 			"featured": false,
-			"sale": 68.50
+			"sale": 67.50
 		}, {
 			"number": "SS466A",
 			"category": "Hall Effect Sensor",

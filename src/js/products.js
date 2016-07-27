@@ -1,24 +1,13 @@
 $(function() {
-	
-	'use strict';
-	
+		
 		var target = 'table#products';
 		$(target).hide();
 		//detect when a screen resize occurs that results in new media query being utilized;
 		//refires products table build mechanism to switch between layout modes;
 		
 		var events = {
-			'(max-width: 500px)' : function() { 
-				 $("#productform select").change();
-			},
-			'(max-width: 768px)' : function() { 
-				 $("#productform select").change();
-			},
-			'(max-width: 1024px)' : function() { 
-				 $("#productform select").change();
-			},
-			'(min-width: 1024px)' : function() { 
-				 $("#productform select").change();
+			'(all)' : function  (){
+				$("#productform select").change();
 			}
 		};
 		

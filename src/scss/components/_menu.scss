@@ -6,32 +6,34 @@
 			display: table;
 			width: 100%;
 			vertical-align: top;
+			
 			> li {
 			display: table-cell;
-			width: 34.1700819672%;
+			width: 33.35%;	
 			text-align: center;
 			position: relative;
 			
-			&:first-child {
-				width: 31.6598360656%;
-			}
-			
 				> a {
 					display: inline-block;
-					background: #FFF;
+					background: $white;
 					padding: 1em 0;
 					width: 100%;
 					height: 100%;
-					color: #000;
+					color: $black;
 				
 				&:hover,
 				li.active & {
-					color: #09C;
+					color: $blue;
 				}
 				}
-	
+			
+			&:first-child {
+				width: 33.3%;
+			}
+				
 			} // .level1 li
-		
+			
+
 		/* Parents */
 		.no-js &{
 			
@@ -46,11 +48,11 @@
 		.level2 {
 			position: absolute; 
 			display: block;
-			background: #006C8F;	
+			background: $dkblue;	
 			width: 100%;
 			height: auto;
-			border-bottom-width: 1em;
-			border-bottom-color: #09C;
+			border-bottom-width: .75em;
+			border-bottom-color: $blue;
 			border-bottom-style: solid;
 			opacity: 0;
 			line-height: 1.25;
@@ -63,7 +65,7 @@
 
 				a{
 					display: block;
-					color: #FFF;
+					color: $white;
 					padding-top: .25em;
 					padding-right: .5em;
 					padding-bottom: .25em;
@@ -71,7 +73,7 @@
 				
 					
 				&:hover{
-					color: #FFF;
+					color: $white;
 					text-decoration: underline;
 				}
 				
@@ -91,11 +93,10 @@
 				a {
 					padding-top: 1em;
 				}
-				
 			}
 
 			}// .level2 li
-				
+		
 				
 		/* Parents */
 		.no-js &{
@@ -111,8 +112,11 @@
 			opacity: 1;
 			left: 0;
 			z-index: -1;
-		}		
 		}
+		
+		}
+		
+		
 	
 	}// nav
 } /* end min-width 500 */	
@@ -124,25 +128,24 @@
 	}
 	
 	.menu-toggle {
-		width: 25px;
-		height: 25px;
-		background-image: url('../img/menu-toggle.gif');
+		width: 32px;
+		height: 32px;
+		padding: 0;
+		background-color: $black;
+		background-image: url('../img/icons/64x64.svg');
 		background-repeat: no-repeat;
-		background-position: 0 -25px;
+		background-position: 0 -128px;
+		background-size: 64px 160px;
 		position: absolute;
 		cursor: pointer;
-		right: 3px; 
-		top: 3px;
+		right: 6px; 
+		top: 6px;
 		z-index: 10;
 		border: 0;	
 	
 	/* Classes */
 	&.active {
-		background-position: 0 0;
-	}
-	
-	&:focus{
-		outline: 0;
+		background-color: $blue;
 	}
 	}
 	
@@ -155,19 +158,20 @@
 			display: block;
 			width: 100%;
 			padding: 0 0;
-			background: #FFF;
+			background: $white;
 			
 				> a{
 					display: block;
 					height: 100%;
-					background: #BBB;
+					background: $grey;
 					padding: .75em 0;
-					color: #FFF;
+					color: $white;
 					text-align: center;
+					border-bottom: 1px solid $borderLowlight;
 				
 				&:hover,
 				&.active{
-				background: #09C;
+				background: $blue;
 				}
 				}
 			
@@ -181,14 +185,14 @@
 			top: 0; 
 			left: 0;
 			height: auto;
-			background: #FFF;
+			background: $white;
 		
 			> li{
 				padding: .75em 0;
-			
 				> a{
-					color: #000;
+					color: $black;
 					text-transform: uppercase;
+					
 				}
 			
 			}

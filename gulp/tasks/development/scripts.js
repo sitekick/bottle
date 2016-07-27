@@ -6,5 +6,5 @@ var gulp 	= require('gulp'),
 gulp.task('scripts', function() {
 	gulp.src(config.src)
 		.pipe(concat('scripts.js'))
-		.pipe(gulp.dest(config.dest))
+		.pipe(gulp.dest(config.dest));
 });

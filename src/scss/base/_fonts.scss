@@ -18,10 +18,8 @@ body {
 }
 
 h1 {
-// 	font-family: $cabin;
 	font-size: 1.6em;
 	font-weight: 400;
-// 	color: #09C;
 	color: $white;
 	}
 
@@ -96,8 +94,8 @@ label {
 		
 	&[for="ui-select"]{	
 		font-family: $cabin;
-		font-size: 1.5em;
-		font-weight: 400;	
+		font-size: 1.25em;
+		font-weight: 300;	
 	}
 }
 

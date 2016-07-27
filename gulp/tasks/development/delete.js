@@ -1,10 +1,10 @@
 var gulp 	= require('gulp'),
 	del 	= require('del'),
-	config 	= require('../../config').delete;
+	config 	= require('../../config');
 
 /**
  * Delete folders and files
  */
 gulp.task('delete', function() {
-	del(config.src);
+	del(config.delete.src);
 });

@@ -1,13 +1,13 @@
 var gulp 	= require('gulp'),
-	changed = require('gulp-changed'),
-	config 	= require('../../config').images;
+	cache = require('gulp-cached'),
+	config 	= require('../../config');
 
 /**
  * Copy images to build folder
  * if not changed
  */
 gulp.task('images', function() {
-  return gulp.src(config.src)
-    .pipe(changed(config.dest)) // Ignore unchanged files
-    .pipe(gulp.dest(config.dest));
+  return gulp.src(config.images.src)
+    .pipe(cache('image'))
+    .pipe(gulp.dest(config.images.dest));
 });

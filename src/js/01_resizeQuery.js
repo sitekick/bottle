@@ -1,7 +1,5 @@
 var resizeQuery = (function () {
 	
-	'use strict';	
-		
 		var mQueries = ['(max-width: 500px)','(max-width: 768px)','(max-width: 1024px)','(min-width: 1024px)'];
 		var currentMQ = idQuery();
 	
@@ -18,6 +16,11 @@ var resizeQuery = (function () {
 			
 				if(newMQ != tmpMQ){
 					fireCallback(eventsobj,newMQ);
+					
+					if(eventsobj['(all)']){
+						fireCallback(eventsobj,'(all)');
+					}
+					
 					tmpMQ = newMQ;
 				};
 				
@@ -43,7 +46,6 @@ var resizeQuery = (function () {
 				}
 		}
 		
-
 		return monitorMQ; 
 	
 })();

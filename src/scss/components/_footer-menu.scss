@@ -15,7 +15,8 @@
 				text-align: center;
 				display: block;
 				margin: 0;
-				background: #BBB;
+				background: $grey;
+				border-bottom: 1px solid $borderLowlight;
 				padding: .75em 0;
 				color: #FFF;
 				cursor: pointer;
@@ -33,15 +34,27 @@
 		.menu {
 			
 			@include screen-small {
-			text-align: left;
+			text-align: center;
 			}
 		
 			li {
 				
 				@include screen-small {
-				display: list-item;
-				margin-bottom: .5em;
+
+				display: inline-block;
+				border-radius: 5px; 
+				background: $ltblue;
+				margin: .5em .5em .5em 0;
+				padding: .5em;
 				}
+			
+				a {
+					
+					@include screen-small {
+						color: $blue;	
+					}
+				}
+			
 			}
 		
 		}
