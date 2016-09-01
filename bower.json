@@ -20,14 +20,17 @@
     "devbridge-autocomplete": "1.2.24",
     "normalize-css": "^4.2.0",
     "Chart.js": "^2.1.6",
-    "retinajs": "retina.js#^2.1.0"
+    "retinajs": "retina.js#^2.1.0",
+    "bowser": "^1.4.3"
   },
   "resolutions": {
     "jquery": "1.12.0"
   },
   "overrides": {
     "retinajs": {
-      "main": ["./dist/retina.min.js"],
+      "main": [
+        "./dist/retina.min.js"
+      ],
       "dependencies": {}
     }
   }

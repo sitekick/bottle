@@ -1,0 +1,43 @@
+{
+	"blog" : {
+		"software" : [{
+				"title" : "Software Article 1",
+				"teaser" : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+				"image1" : "xerox.svg",
+				"image2" : "copier.jpg",
+				"link" : "#"
+				},{
+				"title" : "Software Article 2",
+				"teaser" : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr. At vero eos et accusam et justo duo dolores et ea rebum.",
+				"image1"  : "dicks.svg",
+				"image2" : "pointofpurchase.jpg",
+				"link"   : "#"
+				},{
+				"title" : "Software Article 3",
+				"teaser" : "Labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+				"image1"  : "viacom.svg",
+				"image2" : "meeting.jpg",
+				"link"   : "#"
+				}],
+		"manufacturers" : [{
+				"title" : "3M",
+				"teaser" : "3M is a global innovation company that never stops inventing. Over the years, 3M's innovations have improved daily life for hundreds of millions of people all over the world.",
+				"image1"  : "3M.svg",
+				"image2" : null,
+				"link" : "#"
+				},{
+				"title" : "Fujistu",
+				"teaser" : "Fujitsu is the leading Japanese information and communication technology (ICT) company offering a full range of technology products, solutions and services. Approximately 162,000 Fujitsu people support customers in more than 100 countries.",
+				"image1"  : "fujitsu.svg",
+				"image2" : null,
+				"link"   : "#"
+				},{
+				"title" : "Samtec",
+				"teaser" : "Samtec is the service leader in the electronic interconnect industry. Founded in 1976, they are a privately held, $565 million global manufacturer of a broad line of electronic interconnects,",
+				"image1"  : "samtec.svg",
+				"image2" : null,
+				"link"   : "#"
+				}]
+	}
+}
+	

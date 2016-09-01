@@ -1,0 +1,40 @@
+{
+	"charts" : {
+		"investor" : {
+			"profitMargin": {
+				"labels" : ["2010", "2011", "2012", "2013", "2014", "2015"],
+				"datasets" : [
+					{ 
+						"label": "Gross Profit Margin",
+						"fill": true,
+						"lineTension" : 0,
+						"backgroundColor" : "#0099CC",
+						"pointBackgroundColor" : "#FFF",
+						"pointBorderWidth" : 2,
+						"borderColor" : "#006C8F",
+						"data" : [12.4,13.0,12.8,13.4,13.2,13.6]
+					}
+				]
+			},
+			"annualRevenue" : {
+				"labels" : ["Americas","EMEA","Asia Pacific"],
+				"datasets" : [
+					{
+						"data" : [9.99,5.18,3.33],
+						"backgroundColor" : ["#006C8F","#0099CC","#D9F0F7"],
+						"borderWidth" : [0,0,0]
+					}
+				]
+			}, 
+			"psRatio" : {
+				"labels" : ["Avnet","Arrow Elec.","Bottle","Littelfuse"],
+				"datasets" : [
+					{
+						"data" : [0.2001,0.2549,0.198,0.3104],
+						"backgroundColor" : ["#006C8F","#006C8F","#0099CC","#006C8F"]
+					}
+				]
+			}
+		}
+	}
+}	

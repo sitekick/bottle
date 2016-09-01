@@ -1,0 +1,228 @@
+{
+	"products": [{
+			"number": "5413879-1",
+			"category": "Connector RF",
+			"price": 2.05,
+			"image": "5413879-1.jpg",
+			"manufacturer": "TE Connectivity Ltd",
+			"description": "Conn BNC RCP 0Hz to 4GHz 50Ohm Solder RA Thru-Hole Gold Tube",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "A000008",
+			"category": "Embedded System Development Boards and Kits",
+			"price": 75.5,
+			"image": "a000008.jpg",
+			"manufacturer": "Arduino Corporation",
+			"description": "ATmega32u4 Microcontroller Development Board 16MHz CPU 64.0024MB RAM 1KB/32KB/32MB EEPROM/Flash",
+			"featured": false,
+			"sale": 67.50
+		}, {
+			"number": "SS466A",
+			"category": "Hall Effect Sensor",
+			"price": 0.93,
+			"image": "SS466A.jpg",
+			"manufacturer": "Honeywell",
+			"description": "Hall Effect Sensor 20mA Latch 5V/9V/12V/15V/18V/24V 3-Pin Bulk",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "NLP250R 96S24J",
+			"category": "AC to DC Power Supply",
+			"price": 213.6,
+			"image": "NLP250R-96S24J.jpg",
+			"manufacturer": "Artesyn Embedded Technologies",
+			"description": "AC/DC Power Supply Single-OUT 24V 7.3A 250W 18-Pin",
+			"featured": false,
+			"sale": 199.95
+		}, {
+			"number": "MMBT2907ALT1G",
+			"category": "GP BJT",
+			"price": 0.05,
+			"image": "MMBT2907ALT1.jpg",
+			"manufacturer": "ON Semiconductor",
+			"description": "Trans GP BJT PNP 60V 0.6A Automotive 3-Pin SOT-23 T/R",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "LC-R121R3P",
+			"category": "Batteries",
+			"price": 14.10,
+			"image": "LCR121R3P.jpg",
+			"manufacturer": "Panasonic",
+			"description": "Lead Acid Battery Rectangular 12V 1.3Ah Rechargeable Desktop",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "CR-2354/HFN",
+			"category": "Batteries",
+			"price": 1.84,
+			"image": "CR2354HFN.jpg",
+			"manufacturer": "Panasonic",
+			"description": "Lithium Battery Coin 3V 560mAh Primary",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "ATSHA204A-XHDA-T",
+			"category": "Memory",
+			"price": 1.29,
+			"image": "ATSHA204AXHDAT.jpg",
+			"manufacturer": "Atmel",
+			"description": "CryptoAuthentication 8-Pin TSOP T/R",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "ATECC508A-MAHDA-T",
+			"category": "Memory",
+			"price": 0.83,
+			"image": "ATECC508AMAHDAT.jpg",
+			"manufacturer": "Atmel",
+			"description": "CryptoAuthentication 8-Pin UDFN EP T/R",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "AWM92100V",
+			"category": "Flow Sensor",
+			"price": 0.45,
+			"image": "AWM92100V.jpg",
+			"manufacturer": "Honeywell",
+			"description": "Flow Sensor Dry Gas 8-Pin",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "ADIS16060BCCZ",
+			"category": "Gyroscopes",
+			"price": 57.64,
+			"image": "ADIS16060BCCZ.jpg",
+			"manufacturer": "Analog Devices",
+			"description": "MEMS Gyroscopes Single Axis",
+			"featured": false,
+			"sale": 50.00
+		}, {
+			"number": "FF-SRT101R2",
+			"category": "Timer Instrument",
+			"price": 74.23,
+			"image": "FFSRT101R2.jpg",
+			"manufacturer": "Honeywell",
+			"description": "Timer Instrument, Time Delay Module",
+			"featured": false,
+			"sale": 60.75
+		}, {
+			"number": "H5L-A",
+			"category": "Timer Instrument",
+			"price": 291.52,
+			"image": "H5LA.jpg",
+			"manufacturer": "Omron",
+			"description": "Daily Time Switch, Weekly Control With A Large Time Display",
+			"featured": false,
+			"sale": 245.00
+		}, {
+			"number": "HE3671A1200",
+			"category": "Reed Relays",
+			"price": 1.24,
+			"image": "HE3671A1200.jpg",
+			"manufacturer": "Littelfuse",
+			"description": "Reed Relays 12VDC 1KOhm 0.5A SPST-NO (( 19.05mm 5.08mm 7.62mm)) THT Dry",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "HD4850",
+			"category": "Solid State Relay",
+			"price": 49.14,
+			"image": "HD4850.jpg",
+			"manufacturer": "Crydom",
+			"description": "Relay SSR 25mA 32V DC-IN 50A 530V AC-OUT 4-Pin",
+			"featured": false,
+			"sale": 33.5
+		}, {
+			"number": "TL431CLPRPG",
+			"category": "Voltage Reference",
+			"price": 0.25,
+			"image": "TL431CLPRPG.jpg",
+			"manufacturer": "ON Semiconductor",
+			"description": "V-Ref Adjustable 2.495V to 36V 100mA Automotive 3-Pin TO-92 Fan-Fold",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "HPS3000 9 001",
+			"category": "AC to DC Power Supply",
+			"price": 573.21,
+			"image": "HPS30009001.jpg",
+			"manufacturer": "Artesyn Embedded Technologies",
+			"description": "AC/DC Power Supply Single-OUT 48V 62A 3KW",
+			"featured": false,
+			"sale": 525.00
+		}, {
+			"number": "LTC2954ITS8-1#TRMPBF",
+			"category": "Power Supply",
+			"price": 3.04,
+			"image": "LTC2954ITS81TRMPBF.jpg",
+			"manufacturer": "Linear Technology",
+			"description": "LTC2954 - Push Button On/Off Controller with µP Interrupt",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "PN22LENA03QE",
+			"category": "Switch Push Button",
+			"price": 0.85,
+			"image": "PN22LENA03QE.jpg",
+			"manufacturer": "C&K Components",
+			"description": "Switch Push Button N.O./N.C. DPDT Square Plunger 0.2A 30VDC Alternate Contact PC Pins Thru-Hole Tray",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "SBLP65-1012G",
+			"category": "Power Supply",
+			"price": 42.23,
+			"image": "SBLP651012G.jpg",
+			"manufacturer": "Bel Power Solutions",
+			"description": "AC/DC Power Supply Single-OUT 12V 5A 60W 8-Pin",
+			"featured": false,
+			"sale": 35.00
+		}, {
+			"number": "frdm-kl43z",
+			"category": "Embedded System Development Boards and Kits",
+			"price": 19.80,
+			"image": "FRDMKL43Z.jpg",
+			"manufacturer": "NXP Semiconductors",
+			"description": "Microcontroller Development Board 48MHz CPU 32KB RAM 256KB Flash",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "BQ76200PW",
+			"category": "Battery Management",
+			"price": 2.89,
+			"image": "BQ76200PW.jpg",
+			"manufacturer": "Texas Instruments",
+			"description": "Battery Charger Lead-Acid -0.3V to 100V 16-Pin TSSOP Tube",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "EVAL6206PD",
+			"category": "Power Management Development Boards and Kits",
+			"price": 29.95,
+			"image": "EVAL6206PD.jpg",
+			"manufacturer": "STMicroelectronics",
+			"description": "L6206 Motion Motor Control Evaluation Board",
+			"featured": true,
+			"sale": false
+		}, {
+			"number": "BQ25892EVM-664",
+			"category": "Power Management Development Boards and Kits",
+			"price": 98.01,
+			"image": "BQ25892EVM664.jpg",
+			"manufacturer": "Texas Instruments",
+			"description": "BQ25892 Battery Management Evaluation Board",
+			"featured": false,
+			"sale": 15.00
+		}, {
+			"number": "1171",
+			"category": "PCB Prototyping Boards",
+			"price": 4.95,
+			"image": "1171.jpg",
+			"manufacturer": "Adafruit Industries",
+			"description": "General Purpose PCB Board with 4 Hole Pad",
+			"featured": true,
+			"sale": false
+		}]
+}

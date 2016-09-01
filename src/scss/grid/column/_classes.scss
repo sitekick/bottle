@@ -1,8 +1,14 @@
 // Column Classes 
-
+&.logo {
+	
+	 @include ua(sf5-1){
+		 height: 150px;
+	 }
+}
 
 &.blog {
 	
+		
 		.image {
 			width: 33%;
 			text-align: center;

@@ -15,7 +15,6 @@
 
 .col1,.col2,.col12 {
 	padding-right: 2.45901%;
-
 	@include screen-small {
 			padding-right: 0;
 		}
@@ -31,8 +30,8 @@
 	.slider & {
 	
 		@include screen-medium{
-			//@ie11 flexbox issue
-			@include ie(11){
+			//@ie11 flexbox issue..
+			@include ua(ie11){
 				height: 0;
 				padding-bottom: percentage(350/642);
 			}

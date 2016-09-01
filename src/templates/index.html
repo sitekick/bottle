@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html class="ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 no-js" lang="en"> <![endif]-->
+<!--[if !(IE)]><!--> <html class="no-js" lang="en"> 
+	<head>
+		<title>Bottle Technology Corporation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width">
+		<!-- bower:css -->
+		<!-- endbower -->
+		<!-- inject:css -->
+		<!-- endinject -->
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="assets/img/favicons/manifest.json">
+		<link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+		<meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+		<div id="container" class="">
+			<div id="login" >
+					<section>
+						<div>
+							<h5>Login</h5>
+						</div>
+					</section>
+				</div>
+			<div class="wrapper main" >
+				<header id="header">
+					<div class="row brand">
+						<div class="column col1 logo">
+							<img src="assets/img/logo/bottle.svg" alt="Bottle Corporation Logo" class="autosize svg" />
+						</div>
+						<div class="column col23 form">
+							<form id="searchform" action="" >
+								<div class="border">
+									<input type="text" placeholder="Search" />
+									<input type="submit" value="Search" />
+								</div>
+							</form>
+						</div>
+					</div><!--/.row-->
+					<div class="row nav">
+						<nav id="nav" class="column colspan">
+								<ul id="primary-menu" class="menu level1">
+									<li><a href="#">Who We Are</a>
+										<ul class="menu level2">
+											<li><a href="#">Overview</a></li>
+											<li><a href="#">Management team</a></li>
+											<li><a href="#">Core values</a></li>
+											<li><a href="#">Corporate responsibility</a></li>
+											<li><a href="#">Community involvement</a></li>
+											<li><a href="#">Certifications</a></li>
+											<li><a href="#">History</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Who We Serve</a>
+										<ul class="menu level2">
+											<li><a href="#">Overview</a></li>
+											<li><a href="#">Customers</a></li>
+											<li><a href="#">Global reach</a></li>
+											<li><a href="#">Channel partners</a></li>	
+											</ul>
+									</li>
+									<li><a href="#">What We Do</a>
+										<ul class="menu level2">
+											<li><a href="#">Overview</a></li>
+											<li><a href="#">Electronic component solutions</a></li>
+											<li><a href="#">IT solutions</a></li>
+											<li><a href="#">Services</a></li>
+										</ul>
+									</li>
+								</ul>
+						</nav>
+						
+					</div><!--/.row-->
+					<div class="row slider">
+							<div class="column col12">
+								<img src="assets/img/servers.jpg" data-rjs="assets/img/servers@1.5x.jpg" alt="300 locations" class="autosize" />
+							</div>
+							<div class="column col3">
+								<h1>300+ locations and 8 major distribution centers.</h1>
+								<h5><a href="#" class="button" >Connect with us.</a></h5>
+							</div>
+					</div><!--/.row-->
+				</header> <!--/#header-->
+				<main id="main">
+					<div class="row products">
+						<div class="column col1">
+							<div class="revealpanel">
+								<section>
+								<div class="wrapper">
+									<h2>Components and systems from the top manufacturers in the industry</h2>
+									<ul class="menu">
+										<li><a href="#">Datasheets</a></li>
+										<li><a href="#">Reference Designs</a></li>
+									</ul>
+								</div>
+								</section>
+							</div>
+						</div>
+						<div class="column col23">
+							<section>
+								<form action="" id="productform" class="ui-form">
+									<label for="ui-select"> Choose Products:</label>
+									<select name="ui-select">
+										<option value="featured" selected>Featured Products</option>
+										<option value="sale">Sale Items</option>
+									</select>
+								</form>
+								<table id="products" class="sectiontable" cellpading="0" cellspacing="0" border="0">
+									<thead>
+										<tr>
+											<th class="partimg"></th>
+											<th class="partman">Manufacturer</th>
+											<th class="partdesc">Description</th>
+											<th class="partnum">Part</th>
+											<th class="partcat">Category</th>
+											<th class="partprice">Unit Price</th>
+										</tr>
+									</thead>
+									<tbody><!--JSON:products.json--></tbody>
+								</table>
+							</section>
+						</div>
+					</div><!--/.row-->
+					<div class="row software">
+						<div class="column col12 blog">
+							<section>
+								<form action="" id="softwareform" class="ui-form">
+									<label for="ui-select"> Choose Topic:</label>
+									<select name="ui-select">
+										<option value="software" selected>Blog Articles</option>
+										<option value="manufacturers">Featured Manufacturers</option>
+									</select>
+								</form>
+								<div class="scrollwrap">
+								<!--JSON:software.json-->
+								</div><!--/.scrollwrap-->
+							</section>
+						</div>
+						<div class="column col3 panel">
+							<div class="revealpanel">
+								<div class="wrapper">
+									<section>
+									<h2>Software solutions for any platform</h2>
+										<ul class="menu">
+											<li><a href="#">Training</a></li>
+											<li><a href="#">Symposiums</a></li>
+										</ul>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div><!--/.row-->
+				</main><!--/#main-->
+			</div><!--/.wrapper-->
+			<aside class="floater graphs">
+				<div class="wrapper">
+					<div class="item">
+								<section>
+									<h3>Annual Profit Margin</h3>
+									<canvas id="chart1"></canvas>
+								</section>
+					</div>
+					<div class="item">
+								<section>
+									<h3>Annual Revenue</h3>
+									<p>$18.5 B</p>
+									<canvas id="chart2"></canvas>
+								</section>
+					</div>
+					<div class="item">
+								<section>
+									<h3>PS Ratio</h3>
+									<canvas id="chart3"></canvas>
+								</section>
+					</div>
+				</div><!--/.wrapper-->
+			</aside><!--/.floater-->
+			<div class="wrapper footer">
+					<footer id="footer" >
+						<hr>
+					<div class="row">
+						<div class="column col1">
+							<h4>About Bottle</h4>
+								<ul class="menu">
+								<li><a href="#">Company overview</a></li>
+								<li><a href="#">Fact sheet</a></li>
+								<li><a href="#">Management team</a></li>
+								<li><a href="#">Certifications</a></li>
+								<li><a href="#">History</a></li>
+								<li><a href="#">Corporate responsibility</a></li>
+								</ul>
+							<h4>Capabilities & Solutions</h4>
+								<ul class="menu">
+								<li><a href="#">Components</a></li>
+								<li><a href="#">Software</a></li>
+								<li><a href="#">Services</a></li>
+								</ul>
+						</div>
+						<div class="column col2">
+							<h4>Investors</h4>
+								<ul class="menu">
+								<li><a href="#">Stock quote</a></li>
+								<li><a href="#">Investor overview</a></li>
+								<li><a href="#">Governance</a></li>
+								<li><a href="#">SEC filings</a></li>
+								</ul>
+							<h4>Careers at Bottle</h4>
+								<ul class="menu">
+								<li><a href="#">Careers and opportunities</a></li>
+								<li><a href="#">Culture and core values</a></li>
+								<li><a href="#">Community involvement</a></li>
+								</ul>						
+							</div>
+						<div class="column col3">
+							<h4>Press</h4>
+								<ul class="menu">
+								<li><a href="#">Newsroom</a></li>
+								<li><a href="#">Press contacts</a></li>
+								</ul>
+							<h4>Legal</h4>
+								<ul class="menu">
+								<li><a href="#">Data privacy policy</a></li>
+								<li><a href="#">Legal notices</a></li>
+								<li><a href="#">Privacy</a></li>
+								<li><a href="#">Terms and conditions</a></li>
+								</ul>
+							<h4>Help</h4>
+								<ul class="menu">
+								<li><a href="#">Contact us</a></li>
+								<li><a href="#">Sitemap</a></li>
+								</ul>			
+						</div>
+					</div>
+			</footer><!--/#footer-->
+			</div><!--/.wrapper.footer-->
+			<aside class="floater address">
+				<hr>
+				<div class="wrapper">
+					<div class="item">
+						<section>
+						<h4>Bottle Technology Corporation</h4>
+						<p>429 W York St #2D<br/>
+							Norfolk, VA 23510</p>
+						</section>
+					</div>
+					<div class="item social">
+						<ul class="menu">
+							<li><a href="#" class="google"><span>Google</span></a></li>
+							<li><a href="#" class="facebook"><span>Facebook</span></a></li>
+							<li><a href="#" class="twitter"><span>Twitter</span></a></li>
+							<li><a href="#" class="youtube"><span>YouTube</span></a></li>
+						</ul>
+					</div>
+				</div><!--/.row-->
+			</aside><!--/.floater-->
+		</div> <!--/#container-->
+	<!-- bower:js -->
+	<!-- endbower -->
+	<!-- inject:js -->
+	<!-- endinject -->
+	</body>
+</html>	

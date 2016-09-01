@@ -3,7 +3,16 @@
 	.column {
 		display: block;
 	}	
+	
+	.col1, .col3 {
+		flex-grow: 1;
+	}
+	.col23, .col12 {
+		flex-grow: 2;
+	}
 		
-		
+	.colspan {
+		flex-grow: 1;
+	}	
 	
 }// .flexbox

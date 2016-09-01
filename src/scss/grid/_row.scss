@@ -3,7 +3,8 @@
 .row {
 	width: 100%;
 	display: table;
-
+	table-layout: fixed;
+	
 	@include screen-medium {
 		display: block;
 	}

@@ -101,18 +101,11 @@
 }
 
 
-@mixin ie($ver) {
-    @each $v in $ver { 
-        @if type-of($v) != number {
-            @warn 'This mixin only accepts numbers.';
-        }      
-        @else if $v != 9 and $v != 10 and $v != 11 {
-            @warn 'Can only target IE versions 9, 10, and 11.';
-        }
-        @else {
-            html.ie#{$v} & {
-                @content;
-            }
-        }
+@mixin ua($agents) {
+    @each $agent in $agents { 
+
+		html.#{$agent} & {
+            @content;
+         }
     }
 }

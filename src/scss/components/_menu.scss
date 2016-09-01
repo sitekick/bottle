@@ -11,7 +11,7 @@
 			
 			@include clearfix;
 			display: table-cell;
-			width: 33.35%;	
+			width: 33.3333%;	
 			text-align: center;
 			position: relative;
 
@@ -31,7 +31,7 @@
 				}
 			
 			&:first-child {
-				width: 33.3%;
+// 				width: 33.3%;
 			}
 				
 			} // .level1 li
@@ -146,7 +146,7 @@
 		z-index: 10;
 		border: 0;	
 	
-		@include ie(10 9){
+		@include ua(ie10 ie9 sf5-1){
 				background-image: url(../img/icons/64x64.png);
 			}
 	
