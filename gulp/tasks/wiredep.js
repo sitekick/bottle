@@ -13,9 +13,20 @@ gulp.task('inject-D', function(){
 		config.sass.dest.dev + '/style.css'
 	],{read: false});
 	
-	//gutil.log(config.bower);
+	/* bower scripts are pulled from lib directory while build */
 
-	return target.pipe(wiredep()).pipe(inject(sources, {relative: true}))
+	return target.pipe(wiredep({
+		ignorePath : '../../src/lib/',
+		fileTypes: {
+            html: {
+                replace: {
+                    js: '<script src="assets/lib/{{filePath}}"></script>',
+                    css: '<link rel="stylesheet" href="assets/lib/{{filePath}}" />'
+                }
+            }
+        }
+		})).
+	pipe(inject(sources, {relative: true}))
 	.pipe(gulp.dest(config.bower.src.dev));
 
 });
@@ -28,9 +39,18 @@ gulp.task('inject-P', function(){
 		config.sass.dest.prod + '/style.css'
 	],{read: false});
 	
-	//gutil.log(config.bower);
-
-	return target.pipe(wiredep()).pipe(inject(sources, {relative: true}))
+	return target.pipe(wiredep({
+		ignorePath : '../../src/lib/',
+		fileTypes: {
+            html: {
+                replace: {
+                    js: '',
+                    css: '<link rel="stylesheet" href="assets/lib/{{filePath}}" />'
+                }
+            }
+        }
+		}
+	)).pipe(inject(sources, {relative: true}))
 	.pipe(gulp.dest(config.bower.src.prod));
 
 });

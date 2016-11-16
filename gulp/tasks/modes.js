@@ -10,7 +10,7 @@ var gulp 			= require('gulp'),
 gulp.task('build', function() {
   runSequence(
   	'delete-D',
-  	['data-D','images-D'],
+  	['data-D','images-D','libraries-D'],
   	['scripts-D','sass-D'],
   	'html-D',
   	'inject-D',
@@ -18,12 +18,16 @@ gulp.task('build', function() {
   	'serve-D'
   	);
   });
-  
+
+
  gulp.task('qa', function() {
+  /* build with transpiling; no watching for changed files; bower js/css; vendor/custom scripts */
+  
   runSequence(
   	'delete-D',
-  	['data-D','images-D','transpile-D'],
-  	['scripts-D--transpiled','sass-D'],
+  	['data-D','images-D','libraries-D'],
+  	['transpile-D','vendor-js-min'],
+  	['scripts-transpiled','sass-D'],
   	'html-D',
   	'inject-D',
   	'serve-D'
@@ -31,10 +35,13 @@ gulp.task('build', function() {
   });
   
   gulp.task('publish', function() {
+  /* build with transpiling; no watching for changed files; final js and css */
+  
   runSequence(
   	'delete-P',
-  	['data-P','images-P','transpile-P'],
-  	['scripts-P','sass-P'],
+  	['data-P','images-P','libraries-P'],
+  	['transpile-P','vendor-js-min'],
+  	['scripts-transpiled-min','sass-P'],
   	'html-P',
   	'inject-P',
   	'serve-P'

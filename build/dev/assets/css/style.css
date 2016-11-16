@@ -65,17 +65,14 @@ main .row {
 .flexbox .row {
   display: -webkit-box;
   display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
-     -moz-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
-     -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   /* Media Query: .flexbox .row */
@@ -83,17 +80,13 @@ main .row {
 .flexbox .row.brand {
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
-     -moz-box-align: end;
       -ms-flex-align: end;
-              -ms-grid-row-align: flex-end;
           align-items: flex-end;
 }
 .flexbox .row.slider {
   -webkit-box-align: center;
   -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
-              -ms-grid-row-align: center;
           align-items: center;
 }
 @media screen and (max-width: 768px) {
@@ -101,8 +94,6 @@ main .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
-       -moz-box-orient: vertical;
-       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
@@ -112,8 +103,6 @@ main .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -123,8 +112,6 @@ main .row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-       -moz-box-orient: horizontal;
-       -moz-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
@@ -134,8 +121,6 @@ main .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -204,21 +189,18 @@ html.sf5-1 .column.logo {
 .flexbox .col1, .flexbox .col3 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-     -moz-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 .flexbox .col23, .flexbox .col12 {
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
-     -moz-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
 }
 .flexbox .colspan {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-     -moz-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
@@ -1382,14 +1364,11 @@ label[for="ui-select"] {
 .flexbox .floater .wrapper {
   display: -webkit-box;
   display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
@@ -1401,8 +1380,6 @@ label[for="ui-select"] {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-       -moz-box-orient: horizontal;
-       -moz-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
@@ -1412,8 +1389,6 @@ label[for="ui-select"] {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -1423,8 +1398,6 @@ label[for="ui-select"] {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-       -moz-box-orient: horizontal;
-       -moz-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
@@ -1434,8 +1407,6 @@ label[for="ui-select"] {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }

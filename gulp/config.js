@@ -1,9 +1,3 @@
-var src				= './src/',
-	dist			= './build/',
-	dev 			= 'dev/',
-	prod			= 'prod/';
-	
-
 module.exports = {
 	delete: {
 		dest: {
@@ -63,6 +57,16 @@ module.exports = {
 			prod : './build/prod/assets/data'
 		}
 	},
+	lib: {
+		src: {
+			dev : './src/lib/**/*',
+			prod : './src/lib/**/*',
+			}, 
+		dest: {
+			dev : './build/dev/assets/lib',
+			prod : './build/prod/assets/lib'
+		}
+	},
 	sass: {
 		src:  './src/scss/**/*.scss',
 		dest: { 
@@ -89,8 +93,9 @@ module.exports = {
 	autoprefixer: {
 		browsers: [
 			'last 2 versions',
-			'Firefox >= 20',
-			'Safari >= 5.1',
+			'Firefox >= 43',
+			'Chrome >= 43',
+			'Safari >= 8',
 			'ie >= 9',
 			'Edge >= 12',
 			'Opera >= 12.1',
@@ -104,6 +109,14 @@ module.exports = {
 			dev : './build/dev',
 			prod : './build/prod'
 		},
+		dest : './src/js/vendor',
 		index: '/index.html'
+	},
+	server : {
+		url : 'bottle.imac',
+		build : {
+			dev : '/dev',
+			prod : '/prod'
+		}
 	}
 };

@@ -9,7 +9,7 @@ var gulp 	= require('gulp'),
 gulp.task('html-D', function() {
   
   return gulp.src(config.html.src)
-    .pipe(cache('html'))
+    //.pipe(cache('html'))
     .pipe(gulp.dest(config.html.dest.dev));
      
 });

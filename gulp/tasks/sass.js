@@ -4,6 +4,8 @@ var gulp 			= require('gulp'),
 	gulpFilter  	= require('gulp-filter'),
 	sourcemaps  	= require('gulp-sourcemaps'),
 	autoprefixer	= require('gulp-autoprefixer'),
+	bower = require('main-bower-files'),
+	concat 	= require('gulp-concat'),
 	cache = require('gulp-cached'),
 	config 			= require('../config');
 
