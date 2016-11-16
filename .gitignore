@@ -3,4 +3,4 @@
 node_modules
 .tmp
 .arch
-src/lib
+src/lib/*
